@@ -1,0 +1,67 @@
+.menu ul > a:hover {
+  font-weight: bold;
+  background-color: black;
+  color: #f7f509;
+}
+.menu {
+  display: inline-block;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  width: 98%;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  margin: 50px 0px 50px 0px;
+  background-color: lightgray;
+}
+.menu a {
+  background-color: #1dcfe0;
+  text-decoration: none;
+  border: 1px solid gray;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+.boton,
+.botonCorecto,.boton-no {
+  background-color: #583793;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+.botonCorecto {
+  background-color: #abec0d;
+  border-color: #658b08;
+}
+
+.boton-no {
+  background-color: #ec640d;
+  border-color: #f90909;
+}
+
+.contenedor-none {
+  margin: 5%;
+  padding: 2%;
+}
+
+.texto-ok{
+  padding: 5px;
+  background-color: rgb(83,179,63);
+  color: rgb(35,113,52);
+  font-size: 24px;
+}
+
+.contenedor,
+.contenedor-none {
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 0.5px 0.5px 10px gray;
+  /*box-shadow: 0.5px 0.5px 10px gray;*/
+}

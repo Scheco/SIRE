@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>{%block tituo %}Titulo Default{% endblock %}</title>
+    <!-- Esto es para hacer llamar a los estilos -->
+    {% load static from staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+  </head>
+  <body>
+    <nav class="menu">
+      <a href="nuevo/">Registrar</a>
+      <a href="consulta/">Consultar</a>
+    </nav>
+{% block contenido %}
+
+{% endblock %}
+  </body>
+</html>
