@@ -2,6 +2,6 @@ from django.conf.urls import url
 fomr views import *
 urlpatterns = [
 
-url(r'menu/$'
+url(r'menu/$',menu)
 
 ]
