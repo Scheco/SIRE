@@ -12,3 +12,7 @@ from models import Materiales
 from models import MaterialRecolectado
 from models import Clientes
 from models import Ventas
+
+
+def menu(request):
+    return render(request,'menu.html')

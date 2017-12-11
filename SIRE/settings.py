@@ -55,7 +55,7 @@ ROOT_URLCONF = 'SIRE.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR+'/principal/vistas/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,7 +88,7 @@ DATABASES = {
         'HOST': '127.0.0.1', #Con esta direccion nos conectaremos a la base
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': '1234'
+        'PASSWORD': 'arigato2'
     }
 }
 
@@ -129,4 +129,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/principal/recursos/'
+
+STATICFILES_DIRS=(
+    BASE_DIR+'/principal/recursos/',
+)
