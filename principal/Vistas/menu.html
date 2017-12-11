@@ -2,15 +2,22 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>{%block tituo %}Titulo Default{% endblock %}</title>
+    <title>{%block titulo %}Titulo Default{% endblock %}</title>
     <!-- Esto es para hacer llamar a los estilos -->
     {% load static from staticfiles %}
     <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
   </head>
   <body>
     <nav class="menu">
-      <a href="nuevo/">Registrar</a>
-      <a href="consulta/">Consultar</a>
+      <a href="proveedores/">Proveedores</a>
+      <a href="negocios/">Negocios</a>
+      <a href="horarios">Horarios</a>
+      <a href="trabajadores">Trabajadores</a>
+      <a href="camiones">camiones</a>
+      <a href="materiales">Materiales</a>
+      <a href="materialRecolectado">Material <br> Recolectado </a>
+      <a href="clientes">Clientes</a>
+      <a href="ventas">Ventas</a>
     </nav>
 {% block contenido %}
 
