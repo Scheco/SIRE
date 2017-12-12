@@ -6,12 +6,12 @@
 
 {% block contenido  %}
 <form class="contenedor" action="/guardarClientes/" method="post">
-      {% csrf_token %}
+     {% csrf_token %}
     <div class="">
-      ID: <input type="number" name="id">
+      ID Cliente: <input type="number" name="idCliente">
     </div>
     <div class="">
-      Tipo de Material: <input type="number" name="tipo">
+      ID Material <input type="number" name="idMaterial">
     </div>
     <div class="">
       Nombre: <input type="text" name="nombre">
@@ -23,11 +23,15 @@
       Apellido Materno: <input type="text" name="apellidoM">
     </div>
     <div class="">
-        Domicilio: <input type="text" name="domicilio"
+        Domicilio: <input type="text" name="domicilio">
     </div>
     <div class="">
-        Telefono: <input type="text" name="telefono "
+        Telefono: <input type="tel" name="telefono ">
     </div>
+
+    <button type="submit" class="boton-ok" >Guardar</button>
 </form>
+
+
 
 {% endblock  %}
