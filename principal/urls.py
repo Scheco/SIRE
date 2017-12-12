@@ -3,6 +3,6 @@ from views import *
 
 urlpatterns = [
 
-url(r'menu/$',menu)
+url(r'^$',menu)
 
 ]
