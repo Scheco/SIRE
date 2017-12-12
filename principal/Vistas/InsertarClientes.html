@@ -1,0 +1,33 @@
+{% extends "menu.html" %}
+
+{% block titulo %}
+  Nuevo Cliente
+{% endblock  %}
+
+{% block contenido  %}
+<form class="contenedor" action="/guardarClientes/" method="post">
+      {% csrf_token %}
+    <div class="">
+      ID: <input type="number" name="id">
+    </div>
+    <div class="">
+      Tipo de Material: <input type="number" name="tipo">
+    </div>
+    <div class="">
+      Nombre: <input type="text" name="nombre">
+    </div>
+    <div class="">
+      Apellido Paterno: <input type="text" name="apellidoP">
+    </div>
+    <div class="">
+      Apellido Materno: <input type="text" name="apellidoM">
+    </div>
+    <div class="">
+        Domicilio: <input type="text" name="domicilio"
+    </div>
+    <div class="">
+        Telefono: <input type="text" name="telefono "
+    </div>
+</form>
+
+{% endblock  %}
