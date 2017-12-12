@@ -7,7 +7,7 @@ from django.http import HttpResponse
 
 from models import Proveedores
 
-# insertar Proveedores
+
 def insertarProveedores(request):
     if 'idProveedor' in request.POST and 'nombreProveedor' in request.POST and 'apellidoP' in request.POST and 'apellidoM' in request.POST and 'edad' in request.POST and 'telefono' in request.POST and 'domicilio' in request.POST:
             idProveedores = request.POST['idProveedor']
