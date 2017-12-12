@@ -5,7 +5,7 @@ from viewsClientes import *
 from viewTrabajadores import *
 
 urlpatterns = [
-url(r'insertarTrabajador/$',insertarTrabajador), 
+url(r'insertarTrabajador/$',insertarTrabajador),
 url(r'guardarClientes/$',insertarClientes),
 url(r'insertarHorario/$',insertarHorario),
 url(r'^$',menu)
