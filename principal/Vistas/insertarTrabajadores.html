@@ -1,0 +1,73 @@
+{% extends "menu.html" %}
+
+{% block titulo %}
+  Nuevo Trabajador
+
+{% endblock %}
+
+{% block contenido %}
+{% if msg%}
+<br>
+<label class="texto-ok">{{msg}}</label>
+{% endif %}
+<form action="/guardar/" method="post" class="contenedor">
+{% csrf_token %}
+<br>
+<div>
+  ID:
+  <br>
+  <input type="text" name="id_Trbajador" class="caja" autofocus>
+</div>
+<div>
+  <br>
+  Nombre:
+  <br>
+  <input type="text" name="Nombre" class="caja">
+</div>
+<div>
+  <br>
+  Apellido Paterno:
+  <br>
+  <input type="text" name="Apellido_p" class="caja">
+</div>
+<div>
+  <br>
+  Apellido Materno:
+  <br>
+  <input type="text" name="Apellido_m" class="caja">
+</div>
+<div>
+  <br>
+  Tipo:
+  <br>
+  <select name="Tipo" >
+    <option value="Chofer">Chofer</option>
+    <option value="Secretaria">Secretaria</option>
+
+
+</select>
+</div>
+<div>
+  <br>
+  Edad:
+  <br>
+  <input type="text" name="Edad" class="caja">
+</div>
+<div>
+  <br>
+  Telefono:
+  <br>
+  <input type="text" name="Telefono" class="caja">
+</div>
+<div>
+  <br>
+  Licencia:
+  <br>
+  <input type="text" name="Licencia" class="caja">
+</div>
+<br>
+<button type="submit" class="boton-ok">Registrar</button>
+
+</form>
+
+{% endblock %}
