@@ -1,0 +1,31 @@
+{% extends "menu.html" %}
+
+{% block titulo %}
+  Insertar Negocio
+{% endblock %}
+<h1>Agregar Negocio</h1>
+{% block contenido %}
+<h1>Agregar Negocio</h1>
+<form action="/guardar/" class="contenedor" method="post">
+  {% csrf_token %}
+  <div>
+    ID: <input type="number" name="idNegocio" class="caja">
+  </div>
+  <div>
+    Id Proveedor: <input type="text" name="idProveedor" class="caja">
+  </div>
+  <div>
+    Nombre del Negocio: <input type="text" name="nombreNegocio" class="caja">
+  </div>
+  <div>
+    Domicilio: <input type="text" name="domicilio" class="caja">
+  </div>
+  <div>
+    Telefono: <input type="tel" name="tel" class="caja">
+  </div>
+  <button type="submit" class="boton-ok">Agregar</button>
+
+</form>
+
+
+{% endblock %}
