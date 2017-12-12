@@ -1,0 +1,64 @@
+{% extends "menu.html" %}
+
+{% block titulo %}
+   Nuevo Proveedor
+{% endblock %}
+
+
+{% block contenido %}
+{% if msg%}
+<br>
+<label class="texto-ok">{{msg}}</label>
+{% endif %}
+<form action="/guardarProveedores/" method="post" class="contenedor">
+{% csrf_token %}
+  <br>
+  <div>
+    ID:
+    <br>
+    <input type="number" name="idProveedor" class="caja" autofocus>
+  </div>
+  <div>
+    <br>
+    Nombre:
+    <br>
+    <input type="text" name="nombreProveedor" class="caja">
+  </div>
+  <div>
+    <br>
+    Apellido Paterno:
+    <br>
+    <input type="text" name="apellidoP" class="caja">
+  </div>
+  <div>
+    <br>
+    Apellido Materno:
+    <br>
+    <input type="text" name="apellidoM" class="caja">
+  </div>
+  <div>
+    <br>
+    Edad:
+    <br>
+    <input type="number" name="edad" class="caja">
+  </div>
+
+  <div>
+    <br>
+    Telefono:
+    <br>
+    <input type="tel" name="telefono" class="caja">
+  </div>
+  <div>
+    <br>
+    Domicilio:
+    <br>
+    <input type="text" name="domicilio" class="caja">
+  </div>
+  <br>
+  <button type="submit" class="boton-ok">Registrar</button>
+
+</form>
+
+
+{% endblock %}
