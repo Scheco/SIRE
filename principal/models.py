@@ -10,7 +10,7 @@ class Proveedores(models.Model):
     apellidoP = models.CharField(max_length=30)
     apellidoM = models.CharField(max_length=30)
     edad = models.IntegerField()
-    telefono = models.IntegerField()
+    telefono = models.CharField(max_length=10)
     domicilio = models.CharField(max_length=50)
 
 class Negocios(models.Model):
@@ -18,7 +18,7 @@ class Negocios(models.Model):
     idProveedores = models.ForeignKey(Proveedores)
     nombre = models.CharField(max_length=50)
     domicilio = models.CharField(max_length=50)
-    telefono = models.IntegerField()
+    telefono = models.CharField(max_length=10)    
 
 class Horarios(models.Model):
     idHorario = models.IntegerField(primary_key=True)
@@ -74,7 +74,7 @@ class Clientes(models.Model):
     apellidoM = models.CharField(max_length=30)
     domicilio = models.CharField(max_length=100)
     telefono = models.CharField(max_length=10)
-    
+
 class Ventas(models.Model):
     idVenta = models.IntegerField(primary_key=True)
     idCliente = models.ForeignKey(Clientes)
