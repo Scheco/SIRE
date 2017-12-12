@@ -3,8 +3,11 @@ from views import *
 from viewsHorarios import *
 from viewsClientes import *
 from viewTrabajadores import *
+from viewsProveedores import *
 
-urlpatterns = [
+urlpatterns = [ 
+url(r'guardarProveedores/$',insertarProveedores),
+url(r'proveedores/$',insertarProveedores),
 url(r'insertarTrabajador/$',insertarTrabajador),
 url(r'guardarClientes/$',insertarClientes),
 url(r'insertarHorario/$',insertarHorario),
