@@ -88,7 +88,7 @@ DATABASES = {
         'HOST': '127.0.0.1', #Con esta direccion nos conectaremos a la base
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': 'arigato2'
+        'PASSWORD': 'Aguilas33'
     }
 }
 
