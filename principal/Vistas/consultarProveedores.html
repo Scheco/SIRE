@@ -1,0 +1,33 @@
+{% extends "menu.html" %}
+
+{% block contenido %}
+    {% if msg%}
+    <br>
+    <label class="texto-ok">{{msg}}</label>
+    {% endif %}
+    <table class="contenedor">
+      <thead>
+        <tr>
+          <th>ID del Proveedor</th>
+          <th>Nombre</th>
+          <th>Apellido Paterno</th>
+          <th>Apellido Materno</th>
+          <th>Edad</th>
+          <th>Telefono</th>
+          <th>Domicilio</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for reg in registros %}
+        <tr>
+          <td>{{reg.idProveedores}}</td>
+          <td>{{reg.nombre}}</td>
+          <td>{{reg.apellidoP}}</td>
+          <td>{{reg.apellidoM}}</td>
+          <td>{{reg.edad}}</td>
+          <td>{{reg.telefono}}</td>
+          <td>{{reg.domicilio}}</td>
+        {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}
