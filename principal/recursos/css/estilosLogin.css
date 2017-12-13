@@ -1,7 +1,8 @@
 body{
   margin: 0px;
   padding: 0px;
-  background :  rgb(16, 100, 212);
+  background-color:rgb(22, 148, 106);
+  /*seagreen*/
   background-size: cover;
   background-position: center;
   font-family: sans-serif;
@@ -10,28 +11,29 @@ body{
 
 .CajaLogin{
   width: 320px;
-  height: 420px;
+  height: 450px;
   background: rgba(3, 4, 3, 0.71);
   color: #0c873a;
-  top: 50%;
-  left: 50%;
+  top: 67%;
+  left: 49%;
+
   position: absolute;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
-  padding: 70px 30px;
+  padding: 45px 30px;
 border-radius: 5%;
 
 }
 
 .avatar{
-  width: 100px;
-  height: 100px;
+  width: 450px;
+  height: 300px;
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
-  top: -50px;
-  left: calc(50% - 50px);
-  background-image:url("tec.png");
+  top: -250px;
+  left: calc(50% - 260px);
+  background-image:url("logo.png");
 }
 
 
@@ -39,7 +41,8 @@ h1{
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
-    font-size: 22px;
+    font-size: 30px;
+    color: wheat;
 
 }
 
@@ -70,7 +73,7 @@ font-size: 15px;
   height: 40px;
   background: #18a851;
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 20px;
 
 }
@@ -83,7 +86,7 @@ font-size: 15px;
 
 .CajaLogin a{
   text-decoration: none;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 20px;
   color: darkgrey;
 
