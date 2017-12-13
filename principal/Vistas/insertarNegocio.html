@@ -6,11 +6,8 @@
 <h1>Agregar Negocio</h1>
 {% block contenido %}
 <h1>Agregar Negocio</h1>
-<form action="/guardar/" class="contenedor" method="post">
+<form action="/insertarNegocio/" class="contenedor" method="post">
   {% csrf_token %}
-  <div>
-    ID: <input type="number" name="idNegocio" class="caja">
-  </div>
   <div>
     Id Proveedor: <input type="text" name="idProveedor" class="caja">
   </div>

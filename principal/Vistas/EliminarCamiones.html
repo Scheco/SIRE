@@ -1,0 +1,32 @@
+{% extends "menu.html" %}
+
+{% block titulo %}
+ Eliminar Camión
+{% endblock  %}
+
+{% block contenido  %}
+<form class="contenedor" action="/eliminarCamiones/" method="post">
+     {% csrf_token %}
+    <div class="">
+      ID Camion: <input type="number" name="idCamion">
+    </div>
+    <div class="">
+      ID Trabajador <input type="number" name="idTrabajador">
+    </div>
+    <div class="">
+      Modelo: <input type="text" name="modelo">
+    </div>
+    <div class="">
+      Marca: <input type="text" name="marca">
+    </div>
+    <div class="">
+      Anio: <input type="text" name="anio">
+    </div>
+
+
+    <button type="submit" class="boton-no" >Eliminar</button>
+</form>
+
+
+
+{% endblock  %}

@@ -1,0 +1,32 @@
+{% extends "menu.html" %}
+
+{% block titulo %}
+  Nuevo Camion
+{% endblock  %}
+
+{% block contenido  %}
+<form class="contenedor" action="/guardarCamion/" method="post">
+     {% csrf_token %}
+    <div class="">
+      ID Camion: <input type="text" name="idCamion">
+    </div>
+    <div class="">
+      ID Trabajador <input type="text" name="idTrabajador">
+    </div>
+    <div class="">
+      Modelo: <input type="text" name="modelo">
+    </div>
+    <div class="">
+      Marca: <input type="text" name="marca">
+    </div>
+    <div class="">
+      Anio: <input type="text" name="anio">
+    </div>
+
+
+    <button type="submit" class="boton-ok" >Insertar</button>
+</form>
+
+
+
+{% endblock  %}

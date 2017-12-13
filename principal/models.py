@@ -5,7 +5,7 @@ from django.db import models
 
 # Create your models here.
 class Proveedores(models.Model):
-    idProveedores = models.IntegerField(primary_key=True)
+    idProveedores = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=30)
     apellidoP = models.CharField(max_length=30)
     apellidoM = models.CharField(max_length=30)
@@ -14,11 +14,11 @@ class Proveedores(models.Model):
     domicilio = models.CharField(max_length=50)
 
 class Negocios(models.Model):
-    idNegocio = models.IntegerField(primary_key=True)
+    idNegocio = models.AutoField(primary_key=True)
     idProveedores = models.ForeignKey(Proveedores)
     nombre = models.CharField(max_length=50)
     domicilio = models.CharField(max_length=50)
-    telefono = models.CharField(max_length=10)    
+    telefono = models.CharField(max_length=10)
 
 class Horarios(models.Model):
     idHorario = models.IntegerField(primary_key=True)
@@ -37,7 +37,7 @@ class Horarios(models.Model):
     horaSabado = models.TimeField(null=False)
 
 class Trabajadores(models.Model):
-    idTrabajador = models.IntegerField(primary_key=True)
+    idTrabajador = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=30)
     apellidoP = models.CharField(max_length=30)
     apellidoM = models.CharField(max_length=30)
