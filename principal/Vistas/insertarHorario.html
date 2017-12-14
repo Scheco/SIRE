@@ -3,39 +3,41 @@
 {% block  titulo%}
   Nuevo Horario
 {% endblock %}
-
 {% block contenido %}
-<form class="contenedor" action="insertarHorario" method="post">
+
+<form class="contenedor" action="insertarHorario" method="post" >
 {% csrf_token %}
-<div class="">
+
+
+<div class="menus">
   ID Horario: <input type="text" name="id">
 </div>
 
-<div class="">
+<div class="menus">
   <label>Id Negocio</label> <select class="" name=""></select>
 </div>
 
-<div class="">
+<div class="menus">
   Lunes: <input type="checkbox" name="lunes">
 </div>
 
-<div class="">
+<div class="menus">
   Martes: <input type="checkbox" name="martes">
 </div>
 
-<div class="">
+<div class="menus">
   Miercoles: <input type="checkbox" name="miercoles">
 </div>
 
-<div class="">
+<div class="menus">
   Jueves: <input type="checkbox" name="jueves">
 </div>
 
-<div class="">
+<div class="menus">
   Viernes: <input type="checkbox" name="viernes">
 </div>
 
-<div class="">
+<div class="menus">
   Sabado: <input type="checkbox" name="sabado">
 </div>
 

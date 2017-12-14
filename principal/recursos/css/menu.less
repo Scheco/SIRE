@@ -2,16 +2,25 @@
 @colorOnMoveOpcion: rgb(150, 220, 255);
 
 .menu{
-  // display: inline-block;
+ display: inline-block;
   border-bottom: 1px solid gray;
   border-top: 1px solid gray;
   width: 98.3%;
   text-align: center;
-  font-size: 20px;
+  font-size: 30px;
   padding: 10px;
   margin: 50px 0px 50px 0px;
   background-color: lightgray;
   list-style: none;
+  width: 450px;
+  height: 300px;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -250px;
+  left: calc(50% - 260px);
+
+
   a{
     background-color: @colorOpcion;
     text-decoration: none;
@@ -26,6 +35,4 @@
     color:black;
     transition: 1s;
   }
-
-
 }
