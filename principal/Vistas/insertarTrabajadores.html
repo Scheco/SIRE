@@ -10,14 +10,14 @@
 <br>
 <label class="texto-ok">{{msg}}</label>
 {% endif %}
-<form action="/guardar/" method="post" class="contenedor">
+<form action="/insertarTrabajador/" method="post" class="contenedor">
 {% csrf_token %}
 <br>
-<div>
-  ID:
-  <br>
-  <input type="text" name="id_Trbajador" class="caja" autofocus>
-</div>
+{# <div>#}
+  {# ID:#}
+  {# <br>#}
+  {# <input type="text" name="id_Trbajador" class="caja" autofocus>#}
+{# </div>#}
 <div>
   <br>
   Nombre:
@@ -69,5 +69,7 @@
 <button type="submit" class="boton-ok">Registrar</button>
 
 </form>
+
+
 
 {% endblock %}

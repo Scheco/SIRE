@@ -5,7 +5,9 @@ from viewsClientes import *
 from viewTrabajadores import *
 from viewsProveedores import *
 
-urlpatterns = [ 
+urlpatterns = [
+url(r'consltarTrabajadores/$',consltarTrabajadores),
+url(r'trabajadores/$',trabajadores),
 url(r'guardarProveedores/$',insertarProveedores),
 url(r'proveedores/$',insertarProveedores),
 url(r'insertarTrabajador/$',insertarTrabajador),

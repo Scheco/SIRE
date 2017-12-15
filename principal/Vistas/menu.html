@@ -6,14 +6,13 @@
     <!-- Esto es para hacer llamar a los estilos -->
     {% load static from staticfiles %}
     <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
-  </head>
+    </head>
   <body>
-    <nav class="menu">
+    <nav class="menus">
       <a href="proveedores/">Proveedores</a>
       <a href="/negocios/">Negocios</a>
-      <a href="horarios">Horarios</a>
       <a href="insertarHorario/">Horarios</a>
-      <a href="trabajadores">Trabajadores</a>
+      <a href="trabajadores/">Trabajadores</a>
       <a href="camiones">camiones</a>
       <a href="materiales">Materiales</a>
       <a href="materialRecolectado">Material Recolectado</a>
@@ -21,7 +20,6 @@
       <a href="ventas">Ventas</a>
     </nav>
 {% block contenido %}
-
 {% endblock %}
   </body>
 </html>

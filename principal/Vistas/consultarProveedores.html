@@ -18,7 +18,7 @@
         </tr>
       </thead>
       <tbody>
-        {% for reg in registros %}
+        {% for reg in registroProveedores %}
         <tr>
           <td>{{reg.idProveedores}}</td>
           <td>{{reg.nombre}}</td>
@@ -27,6 +27,14 @@
           <td>{{reg.edad}}</td>
           <td>{{reg.telefono}}</td>
           <td>{{reg.domicilio}}</td>
+          <td><form action="modificarProveedores/" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="idProveedores" value="{{reg.idProveedores}}">
+            <button class="boton-ok" type="submit">Modificar</button>
+          </form>
+          <td>
+          <a href="feliminarProveedor/?idProveedores={{reg.idProveedores}}" class="boton-no">Eliminar</a>
+          </td>
         {% endfor %}
       </tbody>
     </table>

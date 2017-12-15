@@ -7,25 +7,25 @@
 {% block contenido  %}
 <form class="contenedor" action="/guardarClientes/" method="post">
      {% csrf_token %}
-    <div class="">
+    <div class="menus">
       ID Cliente: <input type="number" name="idCliente">
     </div>
-    <div class="">
+    <div class="menus">
       ID Material <input type="number" name="idMaterial">
     </div>
-    <div class="">
+    <div class="menus">
       Nombre: <input type="text" name="nombre">
     </div>
-    <div class="">
+    <div class="menus">
       Apellido Paterno: <input type="text" name="apellidoP">
     </div>
-    <div class="">
+    <div class="menus">
       Apellido Materno: <input type="text" name="apellidoM">
     </div>
-    <div class="">
+    <div class="menus">
         Domicilio: <input type="text" name="domicilio">
     </div>
-    <div class="">
+    <div class="menus">
         Telefono: <input type="text" name="telefono">
     </div>
 

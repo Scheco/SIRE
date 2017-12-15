@@ -1,0 +1,32 @@
+{% extends "menu.html" %}
+
+{% block contenido %}
+
+    <table class="contenedor">
+      <thead>
+        <tr>
+          <th>ID del Trabajador</th>
+          <th>Nombre</th>
+          <th>Apellido Paterno</th>
+          <th>Apellido Materno</th>
+          <th>Tipo</th>
+          <th>Edad</th>
+          <th>Telefono</th>
+          <th>Licencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for con in Trabajadores %}
+        <tr>
+          <td>{{con.idTrabajador}}</td>
+          <td>{{con.nombre}}</td>
+          <td>{{con.apellidoP}}</td>
+          <td>{{con.apellidoM}}</td>
+          <td>{{con.tipo}}</td>
+          <td>{{con.edad}}</td>
+          <td>{{con.telefono}}</td>
+          <td>{{con.licencia}}</td>
+        {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}
