@@ -8,42 +8,52 @@
 
 
 
-<form class="contenido" action="insertarHorario" method="post" >
+<form class="contenedor" action="insertarHorario" method="post" >
 {% csrf_token %}
 
 
-<div class="Hora">
-  ID Horario: <input type="text" name="id">
+<div class="CajaLogin">
+  <br>
+  ID Horario:
+  <br> <input type="text" name="id" class="caja">
 </div>
 
-<div class="Horas">
-  <label>Id Negocio</label> <select class="" name=""></select>
+<div class="CajaLogin">
+<br>
+  <label>Id Negocio:
+  </label> <br> <select class="caja" name=""></select>
 </div>
 
-<div class="Hora">
-  Lunes: <input type="checkbox" name="lunes">
+<div class="CajaLogin  ">
+  <br>
+  Lunes:  <input type="checkbox" name="lunes"  >
 </div>
 
-<div class="Horas">
-  Martes: <input type="checkbox" name="martes">
+<div class="CajaLogin">
+  <br>
+  Martes: <input type="checkbox" name="martes"  >
 </div>
 
-<div class="Hora">
+<div class="CajaLogin">
+  <br>
   Miercoles: <input type="checkbox" name="miercoles">
 </div>
 
-<div class="Horas">
-  Jueves: <input type="checkbox" name="jueves">
+<div class="CajaLogin">
+  <br>
+  Jueves: <input type="checkbox" name="jueves" >
 </div>
 
-<div class="Hora">
-  Viernes: <input type="checkbox" name="viernes">
+<div class="CajaLogin">
+  <br>
+  Viernes: <input type="checkbox" name="viernes" >
 </div>
 
-<div class="Horas">
-  Sabado: <input type="checkbox" name="sabado">
+<div class="CajaLogin">
+  <br>
+  Sabado: <input type="checkbox" name="sabado" >
 </div>
-
-<button type="submit" class="boton-ok">Guardar</button>
+<br>
+<button type="submit" class="boton">Guardar</button>
 </form>
 {% endblock %}

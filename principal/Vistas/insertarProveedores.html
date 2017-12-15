@@ -10,6 +10,7 @@
 <br>
 <label class="texto-ok">{{msg}}</label>
 {% endif %}
+
 <form action="/guardarProveedores/" method="post" class="contenedor">
 {% csrf_token %}
   <br>
@@ -57,7 +58,7 @@
     <input type="text" name="domicilio" class="caja">
   </div>
   <br>
-  <button type="submit" class="boton-ok">Registrar</button>
+  <button type="submit" class="boton">Registrar</button>
 
 </form>
 

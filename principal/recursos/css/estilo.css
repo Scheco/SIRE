@@ -82,6 +82,24 @@
   transition: 0.5s;
   color: #284d8a;
 }
+.caja,
+.caja-error {
+  border: 0.5px solid lightgray;
+  background-color: white;
+  box-shadow: 0px 0px 10px #ffffff;
+  margin: 3px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.caja:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px skyblue;
+}
+.caja-error {
+  border: 0.5px solid #d44018;
+  box-shadow: 0px 0px 10px #ee8264;
+}
 html {
   background-image: url("nuevo.png");
 }
@@ -113,6 +131,22 @@ label {
   margin: 5%;
   padding: 2%;
 }
+input[type="checkbox"],
+input[type="name"] {
+  padding: 30px 10px 18px 30px;
+}
+.caja > input {
+  margin: 50px -15px 8px 205px;
+  padding: -12px 10px 18px 30px;
+}
+.contenedor {
+  border: 3px solid darkgreen;
+  width: 90%;
+  border-radius: 2px solid limegreen;
+  background-color: #159a46;
+  margin: 50px -15px 8px 205px;
+  padding: 0px 10px 18px 30px;
+}
 .contenedor:entend(.contenedor-none) {
   border: 1px solid lightgray;
   border-radius: 4px;
@@ -125,7 +159,7 @@ label {
   text-align: center;
   font-size: 23px;
   padding: 10px;
-  margin: 80px 4px 8px 205px;
+  margin: 20px 4px 8px 205px;
   background-color: #56b36a;
 }
 a {
@@ -191,12 +225,14 @@ a:hover {
   color: #284d8a;
 }
 .caja,
+.caja-error,
 .caja-error {
   border: 0.5px solid lightgray;
   background-color: white;
   box-shadow: 0px 0px 10px #ffffff;
   margin: 3px;
   padding: 5px;
+  width: 60%;
   font-size: 16px;
   border-radius: 6px;
 }
