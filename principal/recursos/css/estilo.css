@@ -72,6 +72,9 @@
   transition: 0.5s;
   color: #284d8a;
 }
+html {
+  background-image: url("nuevo.png");
+}
 body {
   right: 30%;
 }
