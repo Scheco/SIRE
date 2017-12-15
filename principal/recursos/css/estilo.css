@@ -38,6 +38,8 @@
   background-color: #96dcff;
   border: 1px solid black;
   color: black;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 .boton,
@@ -66,19 +68,28 @@
 }
 .boton-ok:hover {
   background-color: #63db64;
+  -webkit-box-shadow: 0px 0px 8px #0c330c;
   box-shadow: 0px 0px 8px #0c330c;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   color: #0c330c;
 }
 .boton-no:hover {
   background-color: #daacac;
+  -webkit-box-shadow: 0px 0px 8px #5e2929;
   box-shadow: 0px 0px 8px #5e2929;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   color: #5e2929;
 }
 .boton:hover {
   background-color: #c3d3ee;
+  -webkit-box-shadow: 0px 0px 8px #284d8a;
   box-shadow: 0px 0px 8px #284d8a;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   color: #284d8a;
 }
@@ -86,6 +97,7 @@
 .caja-error {
   border: 0.5px solid lightgray;
   background-color: white;
+  -webkit-box-shadow: 0px 0px 10px #ffffff;
   box-shadow: 0px 0px 10px #ffffff;
   margin: 3px;
   padding: 5px;
@@ -94,10 +106,12 @@
 }
 .caja:focus {
   outline: none;
+  -webkit-box-shadow: 0px 0px 10px skyblue;
   box-shadow: 0px 0px 10px skyblue;
 }
 .caja-error {
   border: 0.5px solid #d44018;
+  -webkit-box-shadow: 0px 0px 10px #ee8264;
   box-shadow: 0px 0px 10px #ee8264;
 }
 html {
@@ -111,6 +125,7 @@ body {
   height: 330px;
   margin: 0px;
   padding: 0px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .info {
@@ -141,15 +156,16 @@ input[type="name"] {
 }
 .contenedor {
   border: 3px solid darkgreen;
-  width: 90%;
+  width: 100%;
   border-radius: 2px solid limegreen;
-  background-color: #159a46;
-  margin: 50px -15px 8px 205px;
+  background-image: url("cortar.png");
+  margin: 50px  0px 0px 250px;
   padding: 0px 10px 18px 30px;
 }
 .contenedor:entend(.contenedor-none) {
   border: 1px solid lightgray;
   border-radius: 4px;
+  -webkit-box-shadow: 0.5px 0.5px 10px gray;
   box-shadow: 0.5px 0.5px 10px gray;
 }
 .menus {
@@ -157,7 +173,7 @@ input[type="name"] {
   width: 230%;
   height: 39px;
   text-align: center;
-  font-size: 23px;
+  font-size: 50px;
   padding: 10px;
   margin: 20px 4px 8px 205px;
   background-color: #56b36a;
@@ -171,13 +187,15 @@ a {
   border: 2px solid limegreen;
   padding: 8px 14px 20px 5px;
   margin: -5px -4px -5px -8px;
-  text-align: ;
+  text-align: center;
   color: white;
 }
 a:hover {
   background-color: #96dcff;
   border: 1px solid black;
   color: black;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 .boton,
@@ -208,19 +226,28 @@ a:hover {
 }
 .boton-ok:hover {
   background-color: #63db64;
+  -webkit-box-shadow: 0px 0px 8px #0c330c;
   box-shadow: 0px 0px 8px #0c330c;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   color: #0c330c;
 }
 .boton-no:hover {
   background-color: #daacac;
+  -webkit-box-shadow: 0px 0px 8px #5e2929;
   box-shadow: 0px 0px 8px #5e2929;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   color: #5e2929;
 }
 .boton:hover {
   background-color: #c3d3ee;
+  -webkit-box-shadow: 0px 0px 8px #284d8a;
   box-shadow: 0px 0px 8px #284d8a;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   color: #284d8a;
 }
@@ -229,6 +256,7 @@ a:hover {
 .caja-error {
   border: 0.5px solid lightgray;
   background-color: white;
+  -webkit-box-shadow: 0px 0px 10px #ffffff;
   box-shadow: 0px 0px 10px #ffffff;
   margin: 3px;
   padding: 5px;
@@ -238,10 +266,12 @@ a:hover {
 }
 .caja:focus {
   outline: none;
+  -webkit-box-shadow: 0px 0px 10px skyblue;
   box-shadow: 0px 0px 10px skyblue;
 }
 .caja-error {
   border: 0.5px solid #d44018;
+  -webkit-box-shadow: 0px 0px 10px #ee8264;
   box-shadow: 0px 0px 10px #ee8264;
 }
 .text-ok {
@@ -262,6 +292,7 @@ a:hover {
   margin-left: 50px;
   margin-top: 15px;
   border-radius: 8px  8px  8px  8px;
+  -webkit-box-shadow: 0px 0px 8px 8px #284d8a;
   box-shadow: 0px 0px 8px 8px #284d8a;
 }
 .avatar {
