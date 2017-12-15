@@ -2,7 +2,15 @@
 @import "menu.less";
 @import "botones.less";
 
-body{  right: 50%; }
+
+
+
+
+
+
+body{  right: 30%;
+
+}
 html,body{
   width: 500px;
   height: 330px;
@@ -12,6 +20,7 @@ html,body{
 }
 
 .info{
+  background-image: url("logo.png");
 margin: 50px;
 padding: 20px;
 display: none;
@@ -37,27 +46,25 @@ label{
   box-shadow: 0.5px 0.5px 10px gray;
 
 }
-.menu {
-  border-bottom: 1px solid gray;
-  border-top: 1px solid gray;
-  width: 98.3%;
-  text-align: center;
-  font-size: 10px;
+.fondo {
+  width: 40px;
+  height: 100px;
+
+  background-image: url("logo.png");
   padding: 10px;
   margin: 80px 50px 50px 0px;
   background-color: lightgray;
   list-style: none;
 }
 .menus {
-  position:inherit;
-list-style: none;
-  width: 70%;
+
+   list-style: none;
+  width: 900px;
   text-align: center;
-  display: inline-block;
   font-size: 20px;
   padding: 10px;
-  margin: 15px 15px 15px px;
-  background-color: lightgray;
+  margin: 50px 10px 50px 350px;
+  background-color: darkolivegreen;
 
 }
 .menu a {
@@ -160,16 +167,20 @@ body {
   font-size: 16px;
   font-weight: bold;
 }
-.contenedor-none {
-  margin: 5%;
-  padding: 2%;
-}
-.contenedor {
+
+.contenido {
   width: 500px;
+  height: 248px;
   cursor: pointer;
-  box-shadow: 0.5px 0.5px 10px gray;
-  background-color: #17c662;
-  margin: 50px 50px 50px 50px;
+  font-family:sans-serif;
+  color:black;
+  border: 3px solid black;
+  font-size: 20px;
+  background-color:rgb(73, 159, 13);
+  margin-left: 50px;
+  margin-top: 15px;
+  border-radius: 8px  8px  8px  8px;
+  box-shadow: 0px 0px 8px 8px #284d8a;
 }
 .avatar {
   width: 450px;
@@ -180,23 +191,4 @@ body {
   background-image: url("logo.png");
   top: -250px;
   left: calc(-210%);
-}
-table {
-  border-collapse: collapse;
-}
-table * {
-  border: 1px solid black;
-}
-table > thead > tr {
-  background-color: darkgray;
-  color: white;
-  font-weight: bold;
-}
-table > tbody > tr:nth-child(even) {
-  background-color: lightgray;
-}
-table > tbody > tr:hover {
-  background-color: darkblue;
-  color: white;
-  cursor: pointer;
 }
