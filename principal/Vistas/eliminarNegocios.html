@@ -7,7 +7,11 @@
 <h3>Confirmacion de eliminacion del negocio</h3>
 <form class="contenedor" action="/eliminarNegocios/" method="post">
   {% csrf_token %}
-  <input type="text" name="idNegocio" value="{{idNegocio}}" readonly>
+  {% for Neg in negocios %}
+    Nombre del negocio:   {{Neg.nombre}}
+  {% endfor %}
+  <br><br>
+  ID: <input type="text" name="idNegocio" value="{{idNegocio}}" readonly>
   <button type="submit" class="boton-no">Confirmar eliminacion</button>
 
 </form>

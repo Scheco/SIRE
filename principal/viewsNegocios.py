@@ -39,12 +39,13 @@ def guardarNegocios(request):
     Ne.save()
     negocios=Negocios.objects.all()
     proveedores=Proveedores.objects.all()
-    return render(request,'consultarNegocios.html',{'msg': 'Se ha actualizo el registro correctamente el ID: '+Ne.idNegocio +' Nombre '+Ne.nombre,'registroNegocios':negocios,'registroProveedores':proveedores})
+    return render(request,'consultarNegocios.html',{'msg':  'El negocio con el ID: ' + Ne.idNegocio +' Nombre '+Ne.nombre+' se a actualizado','registroNegocios':negocios,'registroProveedores':proveedores})
 
 
 def eliminarNeg(request):
     idNegocio=request.GET['idNegocio']
-    return render(request,'eliminarNegocios.html',{'idNegocio':idNegocio})
+    negocios=Negocios.objects.filter(idNegocio=idNegocio)
+    return render(request,'eliminarNegocios.html',{'idNegocio':idNegocio,'negocios':negocios})
 
 def eliminarNegocios(request):
     Ne= Negocios(idNegocio = request.POST['idNegocio'])
