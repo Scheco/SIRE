@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block contenido %}
-<h3>Confirmacion de eliminacion del negocio</h3>
+<p>CONFIRMACION DE ELIMINAR NEGOCIOS</p>
 <form class="contenedor" action="/eliminarNegocios/" method="post">
   {% csrf_token %}
   {% for Neg in negocios %}
