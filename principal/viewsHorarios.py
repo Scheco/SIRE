@@ -69,3 +69,73 @@ def consultarHorarios(request):
     negocios=Negocios.objects.all()
     horarios=Horarios.objects.all()
     return render(request,'consultarHorarios.html',{'negocios':negocios,'horarios':horarios})
+
+
+def modificarHorarios(request):
+    registro=Horarios.objects.get(idHorario=request.POST['idHorario'])
+    return render(request,'modificarHorarios.html',{'reg':registro})
+
+def guardarHorarios(request):
+    reg=Horarios(idHorario = request.GET['idHorario'])
+    reg.idNegocio_id = request.GET['idNegocio']
+
+    if "lunes" in request.GET:
+        lunes = True
+    else:
+        lunes = False
+
+    horaLunes = request.GET['horaLunes']
+
+    if "martes" in request.GET:
+        martes = True
+    else:
+        martes = False
+
+    horaMartes = request.GET['horaMartes']
+
+    if "miercoles" in request.GET:
+        miercoles = True
+    else:
+        miercoles = False
+
+
+    horaMiercoles = request.GET['horaMiercoles']
+
+    if "jueves" in request.GET:
+        jueves = True
+    else:
+        jueves = False
+
+
+    horaJueves = request.GET['horaJueves']
+
+    if "viernes" in request.GET:
+        viernes = True
+    else:
+        viernes = False
+
+    horaViernes = request.GET['horaViernes']
+
+    if "sabado" in request.GET:
+        sabado = True
+    else:
+        sabado = False
+
+    horaSabado = request.GET['horaSabado']
+
+    reg.save()
+    negocios=Negocios.objects.all()
+    horarios=Horarios.objects.all()
+    return render(request,'consultarHorarios.html')
+
+def horariosEliminar(request):
+    idHorario=request.POST['idHorario']
+    horarios=Horarios.objects.filter(idHorario=idHorario)
+    return render(request,'eliminarHorarios.html')
+
+def eliminarHorarios(request):
+    reg= Horarios(idHorario = request.POST['idHorario'])
+    reg.delete()
+    negocios= Negocios.objects.all()
+    horarios=Horarios.objects.all()
+    return render(request,'consultarHorarios.html')

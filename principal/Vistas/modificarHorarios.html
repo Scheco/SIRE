@@ -1,0 +1,70 @@
+{% extends "menu.html" %}
+
+{% block  titulo%}
+  Insertar Horario
+{% endblock %}
+{% block contenido %}
+<form class="contenedor" action="guardarHorarios/" method="get">
+  {% csrf_token %}
+
+  <div class="CajaLogin">
+    <br>
+    ID Horario: <input type="text" name="idHorario" class="caja" value="{{reg.idHorario}}"  readonly>
+  </div>
+
+  <div class="CajaLogin">
+  <br>
+    Id Negocio: <input type="text" name="idNegocio" value="{{reg.idNegocio_id}}">
+  </div>
+
+  <div class="CajaLogin  ">
+    <br>
+    Lunes:  <input type="checkbox" name="lunes" value="{{reg.lunes}}">
+  </div>
+  <div class="CajaLogin">
+  <input type="TimeField" name="horaLunes" placeholder="HH:MM" value={{reg.horaLunes}}>
+  </div>
+
+  <div class="CajaLogin">
+    <br>
+    Martes: <input type="checkbox" name="martes">
+  </div>
+  <div class="CajaLogin">
+  <input type="TimeField" name="horaMartes" placeholder="HH:MM" value="{{reg.martes}}">
+  </div>
+
+  <div class="CajaLogin">
+    <br>
+    Miercoles: <input type="checkbox" name="miercoles" value="{{reg.miercoles}}">
+  </div>
+  <div class="CajaLogin">
+  <input type="TimeField" name="horaMiercoles" placeholder="HH:MM" value="{{reg.horaMiercoles}}">
+  </div>
+
+  <div class="CajaLogin">
+    <br>
+    Jueves: <input type="checkbox" name="jueves" value="{{reg.jueves}}">
+  </div>
+  <div class="CajaLogin">
+  <input type="TimeField" name="horaJueves" placeholder="HH:MM" value="{{reg.horaJueves}}">
+  </div>
+
+  <div class="CajaLogin">
+    <br>
+    Viernes: <input type="checkbox" name="viernes" value="{{reg.viernes}}">
+  </div>
+  <div class="CajaLogin">
+  <input type="TimeField" name="horaViernes" placeholder="HH:MM" value="{{reg.horaViernes}}">
+  </div>
+
+  <div class="CajaLogin">
+    <br>
+    Sabado: <input type="checkbox" name="sabado" value="sabado">
+  </div>
+  <div class="CajaLogin">
+  <input type="TimeField" name="horaSabado" placeholder="HH:MM" value="horaSabado">
+  </div>
+  <br>
+  <button type="submit" class="boton">Modificar Horario</button>
+</form>
+{% endblock %}

@@ -46,16 +46,16 @@
         <td>{{reg.sabado}}</td>
         <td>{{reg.horaSabado}}</td>
         <td>
-          <form action="modificar/"  method='post'>
+          <form action="modificarHorarios/"  method='post'>
             {% csrf_token %}
-            <input type="hidden" name="id" value="{{reg.idHorario}}">
+            <input type="hidden" name="idHorario" value="{{reg.idHorario}}">
           <button type="submit" class="botonCorecto">Modificar</button>
         </form>
       </td>
       <td>
-          <form action="eliminarHorario/"  method='post'>
+          <form action="horariosEliminar/"  method='post'>
             {% csrf_token %}
-            <input type="hidden" name="id_horario" value="{{reg.idHorario}}">
+            <input type="hidden" name="idHorario" value="{{reg.idHorario}}">
           <button type="submit" class="boton-no">Eliminar</button>
           {#Esta es una manera mas rapida #}
           {# <a href="eliminar/?id={{reg.idPersona}}" class="boton-no">Eliminar</a>#}
