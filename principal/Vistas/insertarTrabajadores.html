@@ -8,10 +8,14 @@
 {% block contenido %}
 {% if msg%}
 <br>
+
 <label class="texto-ok">{{msg}}</label>
 {% endif %}
+
+
 <form action="/insertarTrabajador/" method="post" class="contenedor">
 {% csrf_token %}
+                    <p>REGISTRO DE TRABAJADORES</p>
 <div>
   <p>  Nombre:</p>
   <input type="text" name="Nombre" class="caja">

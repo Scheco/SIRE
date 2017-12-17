@@ -8,7 +8,8 @@
 
 
 html{
-  background-image: url("nuevo.png");
+  background-image: url("opcion3.png");
+
 }
 
 
@@ -38,12 +39,9 @@ label{
   font-weight: bold;
 }
 
-.contenedor-none{
-  margin: 5%;
-  padding: 2%;
-}
+
 input[type="checkbox"],input[type = "name"]{
-  // margin: 50px  -15px 8px 205px;
+  margin: 20px  15px 8px 10px;
   padding: 30px 10px 18px 30px;
 }
 
@@ -51,48 +49,51 @@ input[type="checkbox"],input[type = "name"]{
   margin: 50px  -15px 8px 205px;
   padding: -12px 10px 18px 30px;
 }
-.contenedor  {
- border:3px solid darkgreen;
-width:190%;
+
+.contenidor>h1{color:white;
+text-align: center;
+}
+.contenedorh  {
+border:3px solid darkgreen;
+width:130%;
 border-radius: 2px solid limegreen;
-background-image: url("./cortar.png");
-margin: 50px  0px 0px 250px;
+ background-image: url("./cortar.png");
+margin: -20px  0px 0px 250px;
+padding: -50px -5px -8px 20px;
+}
+
+.contenedor  {
+border:3px solid darkgreen;
+width:180%;
+border-radius: 2px solid limegreen;
+ background-image: url("./cortar.png");
+margin: 50px  -60px -15px 250px;
 padding: 0px 10px 18px 30px;
 }
-
- p {
-   
-   color:white;
+ p{
+   margin: 20px  0px 0px 0px;
+   padding: 0px 0px -8px 0px;
+   font-size:23px;
+   color: floralwhite;
 }
-.contenedor:entend(.contenedor-none){
-  border: 1px solid lightgray;
-  border-radius: 4px;
-  box-shadow: 0.5px 0.5px 10px gray;
-
-}
-// .fondo {
-//   width: 40px;
-//   height: 100px;
-//   padding: 10px;
-//   margin: 80px 50px 50px 0px;
-//   background-color: lightgray;
-//   list-style: none;
+// .contenedor:entend(.contenedor-none){
+//   border: 1px solid lightgray;
+//   border-radius: 4px;
+//   box-shadow: 0.5px 0.5px 10px gray;
 // }
 .menus {
    list-style: none;
   width: 230%;
-  height: 60px;
+  height: -0px;
   text-align: center;
   font-size: 50px;
-  padding: 10px;
-  margin: 20px 4px 8px 205px;
+  padding: 10px 4px 8px 25px;;
+  margin: 0px 4px 8px 205px;
   background-color: rgb(86, 179, 106);
+  float: left;
 }
-
-
 a{
   font-size: 25px;
-
 
 }
 
@@ -101,10 +102,10 @@ a{
   text-decoration: none; // linea que sirve para quitar el subrayado
   border: 2px solid limegreen;
   padding: 8px 14px 20px 5px;
-  margin: -5px -4px -5px -8px;
+  margin: -5px -4px 5px -8px;
   text-align:center;
   color: white;
-  height: 80%;
+  height: 20%;
 }
 a:hover {
   background-color: #96dcff;
@@ -112,22 +113,22 @@ a:hover {
   color: black;
   transition: 1s;
 }
-.boton,
-.boton-ok,
-.boton-no {
-  background-color: #7499d7;
-  border: 1px solid #3363b2;
-  border-radius: 8px;
-  margin: 5px;
-  padding: 5px;
-  font-size: 16px;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  text-decoration: none;
-}
+// .boton,
+// .boton-ok,
+// .boton-no {
+//   background-color: #7499d7;
+//   border: 1px solid #3363b2;
+//   border-radius: 8px;
+//   margin: 5px;
+//   padding: 5px;
+//   font-size: 16px;
+//   color: white;
+//   font-weight: bold;
+//   text-align: center;
+//   cursor: pointer;
+//   outline: none;
+//   text-decoration: none;
+// }
 .boton-ok {
   background-color: #29af2a;
   border-color: #165c16;
@@ -154,27 +155,26 @@ a:hover {
   transition: 0.5s;
   color: #284d8a;
 }
-.caja,
-.caja-error {
-  border: 0.5px solid lightgray;
-  background-color: white;
-  box-shadow: 0px 0px 10px #ffffff;
-  margin: 3px;
-  padding: 5px;
-    width: 60%;
-  font-size: 16px;
-  border-radius: 6px;
-}
-.caja:focus {
-  outline: none;
-
-  box-shadow: 0px 0px 10px skyblue;
-}
-.caja-error {
-  border: 0.5px solid #d44018;
-  box-shadow: 0px 0px 10px #ee8264;
-}
-
+// .caja,
+// .caja-error {
+//   border: 0.5px solid lightgray;
+//   background-color: white;
+//   box-shadow: 0px 0px 10px #ffffff;
+//   margin: 3px;
+//   padding: 5px;
+    // width: 60%;
+  //font-size: 16px;
+//  border-radius: 6px;
+//}
+// .caja:focus {
+//   outline: none;
+//
+//   box-shadow: 0px 0px 10px skyblue;
+// }
+// .caja-error {
+//   border: 0.5px solid #d44018;
+//   box-shadow: 0px 0px 10px #ee8264;
+// }
 
 
 .text-ok {
@@ -192,21 +192,21 @@ a:hover {
 //   font-size: 16px;
 //   font-weight: bold;
 // }
-
-.contenido {
-  width: 500px;
-  height: 248px;
-  cursor: pointer;
-  font-family:sans-serif;
-  color:black;
-  border: 3px solid black;
-  font-size: 20px;
-  background-color:rgb(73, 159, 13);
-  margin-left: 50px;
-  margin-top: 15px;
-  border-radius: 8px  8px  8px  8px;
-  box-shadow: 0px 0px 8px 8px #284d8a;
-}
+//
+// .contenido {
+//   width: 500px;
+//   height: 248px;
+//   cursor: pointer;
+//   font-family:sans-serif;
+//   color:black;
+//   border: 3px solid black;
+//   font-size: 20px;
+//   background-color:rgb(73, 159, 13);
+//   margin-left: 50px;
+//   margin-top: 15px;
+//   border-radius: 8px  8px  8px  8px;
+//   box-shadow: 0px 0px 8px 8px #284d8a;
+// }
 .avatar {
   width: 450px;
   height: 300px;

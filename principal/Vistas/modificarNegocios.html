@@ -4,6 +4,7 @@
 {% endblock %}
 {% block contenido %}
 <form action="/guardarNegocios/" class="contenedor"  method="post">
+  <p>MODIFICAR NEGOCIOS</p>
   {% csrf_token %}
   <div>
     ID Negocio: <input type="text" name="idNegocio" class="caja" value="{{regNe.idNegocio}}" readonly>
