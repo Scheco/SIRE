@@ -1,38 +1,75 @@
 {% extends "menu.html" %}
 
 {% block  titulo%}
-  Nuevo Horario
+  Insertar Horario
 {% endblock %}
 {% block contenido %}
-<form class="contenedor" action="insertarHorario" method="post" >
-{% csrf_token %}
- <p>REGISTRO DE HORARIOS</p>
-{# <div class="CajaLogin"> #}
+<form class="contenedor" action="insertarHorario/" method="get">
+  {% csrf_token %}
 
-<p>ID Horario:</p>
-   <input type="text" name="id" class="caja">
-{# </div> #}
-{# <div class="CajaLogin"> #}
-  <p>Id Negocio:</p><select class="caja" name="id"></select>
-{# </div> #}
-{# <div class="CajaLogin  "> #}
-  <p>Lunes:</p><input type="checkbox" name="lunes"  >
-{# </div> #}
-{# <div class="CajaLogin"> #}
-  <p>Martes:</p><input type="checkbox" name="martes"  >
-{# </div> #}
-{# <div class="CajaLogin"> #}
-<p>Miercoles:</p><input type="checkbox" name="miercoles">
-{# </div> #}
-{# <div class="CajaLogin"> #}
-  <p>Jueves: </p><input type="checkbox" name="jueves" >
-{# </div> #}
-{# <div class="CajaLogin"> #}
-  <p>Viernes:</p>   <input type="checkbox" name="viernes" >
-{# </div> #}
-{# <div class="CajaLogin"> #}
-  <p>Sabado:</p><input type="checkbox" name="sabado" >
-{# </div> #}<br>
+  <div class="CajaLogin">
+    <br>
+    ID Horario: <input type="text" name="idHorario" class="caja">
+  </div>
+
+  <div class="CajaLogin">
+  <br>
+    {# <label>Id Negocio: #}
+    {# </label> <br> <select class="caja" name=""></select> #}
+    Id Negocio: <input type="text" name="idNegocio" value="">
+  </div>
+
+  <div class="CajaLogin  ">
+    <br>
+    Lunes:  <input type="checkbox" name="lunes">
+  </div>
+  <div class="CajaLogin">
+  <input type="TimeField" name="horaLunes" placeholder="HH:MM">
+  </div>
+
+  <div class="CajaLogin">
+    <br>
+    Martes: <input type="checkbox" name="martes">
+  </div>
+  <div class="CajaLogin">
+  <input type="TimeField" name="horaMartes" placeholder="HH:MM">
+  </div>
+
+  <div class="CajaLogin">
+    <br>
+    Miercoles: <input type="checkbox" name="miercoles">
+  </div>
+  <div class="CajaLogin">
+  <input type="TimeField" name="horaMiercoles" placeholder="HH:MM">
+  </div>
+
+  <div class="CajaLogin">
+    <br>
+    Jueves: <input type="checkbox" name="jueves">
+  </div>
+  <div class="CajaLogin">
+  <input type="TimeField" name="horaJueves" placeholder="HH:MM">
+  </div>
+
+  <div class="CajaLogin">
+    <br>
+    Viernes: <input type="checkbox" name="viernes">
+  </div>
+  <div class="CajaLogin">
+  <input type="TimeField" name="horaViernes" placeholder="HH:MM">
+  </div>
+
+  <div class="CajaLogin">
+    <br>
+    Sabado: <input type="checkbox" name="sabado">
+  </div>
+  <div class="CajaLogin">
+  <input type="TimeField" name="horaSabado" placeholder="HH:MM">
+  </div>
+  <br>
   <button type="submit" class="boton">Guardar</button>
+  {% if  msg%}
+  <label class="texto-ok">{{msg}}</label>
+  {% endif %}
 </form>
 {% endblock %}
