@@ -1,0 +1,42 @@
+{% extends "menu.html" %}
+
+{% block contenido  %}
+{% if msg %}
+<h3 class="texto-ok">{{msg}}</h3>
+{% endif %}
+<table>
+  <thead>
+    <p>CONSULTAR MATERIAL RECOLECTADO</p>
+    <tr>
+      <th>ID MaterialRecolectado</th>
+      <th>Peso</th>
+      <th>Fecha</th>
+      <th>ID Camion</th>
+      <th>ID Material</th>
+      <th>ID Negocio</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for reg in registrosMaterialRecolectado %}
+    <tr style="padding:10px !import">
+      <td>{{reg.idMaterialRecolectado}}</td>
+      <td>{{reg.peso}}</td>
+      <td>{{reg.idCamion}}</td>
+      <td>{{reg.idMaterial}}</td>
+      <th>{{reg.idNegocio}}</th>
+
+      <td>
+        <form action="modificarMaterialRecolectado/" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="idMaterialRecolectado" value="{{reg.idMaterialRecolectado}}">
+          <button class="botonCorecto" >Modificar</button>
+        </form>
+      </td>
+<td>
+<a href="eliminarMaterialRecolectado/?idMaterialRecolectado={{reg.idMaterialRecolectado}}" class="boton-no">Eliminar</a>
+</td>
+    </tr>
+    {% endfor%}
+  </tbody>
+</table>
+{% endblock %}

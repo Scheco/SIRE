@@ -12,47 +12,32 @@
 {% csrf_token %}
 <p >REGISTRAR PROVEEDORES</p>
   <div>
-    {#ID #}
-    <p>  ID:</p>
-    <input type="number" name="idProveedor" class="caja" autofocus>
-  </div>
-  <div>
   <p>Nombre:</p>
-    <input type="text" name="nombreProveedor" class="caja">
+    <input type="text" name="nombreProveedor" class="caja" autofocus>
   </div>
   <div>
 <p>Apellido Paterno:</p>
     <input type="text" name="apellidoP" class="caja">
   </div>
   <div>
-<p>  Apellido Materno:</p>
-
-
+<p>Apellido Materno:</p>
     <input type="text" name="apellidoM" class="caja">
   </div>
   <div>
     <p>Edad:</p>
-
-
     <input type="number" name="edad" class="caja">
   </div>
-
   <div>
     <p>Telefono:</p>
-
-
     <input type="tel" name="telefono" class="caja">
   </div>
   <div>
 <p>Domicilio:
 </p>
-
     <input type="text" name="domicilio" class="caja">
   </div>
   <br>
   <button type="submit" class="boton">Registrar</button>
-
 </form>
-
 
 {% endblock %}

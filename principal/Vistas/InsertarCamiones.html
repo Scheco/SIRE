@@ -5,27 +5,34 @@
 {% endblock  %}
 
 {% block contenido  %}
-<form class="contenedor" action="/guardarCamion/" method="post">
-  <p>REGISTRAR  CAMIONES</p>
+<form class="contenedorRV" action="/guardarCamion/" method="post">
+  <p class="titulos">REGISTRAR  CAMIONES</p>
      {% csrf_token %}
-    <div class="">
-      ID Camion: <input type="text" name="idCamion">
+    <div class="cajaRV">
+      ID Camion: <input type="text" name="idCamion" class="inputRV">
     </div>
-    <div class="">
-      ID Trabajador <input type="text" name="idTrabajador">
+    <div class="cajaRV">
+      ID Trabajador
+
+      <select class="inputRV">
+        {% for reg in trabajadores %}
+        print "<option value=\"".reg.idTrabajador."\">".reg.idTrabajador."</option>"
+        {% endfor %}
+      </select>
+
     </div>
-    <div class="">
-      Modelo: <input type="text" name="modelo">
+    <div class="cajaRV">
+      Modelo: <input type="text" name="modelo" class="inputRV">
     </div>
-    <div class="">
-      Marca: <input type="text" name="marca">
+    <div class="cajaRV">
+      Marca: <input type="text" name="marca" class="inputRV">
     </div>
-    <div class="">
-      Anio: <input type="text" name="anio">
+    <div class="cajaRV">
+      Año: <input type="text" name="anio" class="inputRV">
     </div>
 
 
-    <button type="submit" class="boton" >Insertar</button>
+    <button type="submit" class="botonRV" >Insertar</button>
 </form>
 
 

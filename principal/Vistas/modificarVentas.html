@@ -6,22 +6,22 @@ Modificar Camión
 
 {% block contenido  %}
 <form class="contenedor" action="/modificarCamiones/" method="post">
-  <p>MoDIFICAR CAMIONES</p>
+  <p>MODIFICAR Ventas</p>
      {% csrf_token %}
     {# <div class=""> #}
-    <p>ID Camion: </p>  <input type="number" name="idCamion" class="caja">
+    <p>ID Venta: </p>  <input type="number" name="idVenta" class="caja">
     {# </div> #}
     {# <div class=""> #}
-  <p> ID Trabajador</p>    <input type="number" name="idTrabajador" class="caja">
+  <p> ID Cliente</p>    <input type="number" name="idCliente" class="caja">
     {# </div> #}
     {# <div class=""> #}
-  <p>Modelo:</p>     <input type="text" name="modelo" class="caja">
+  <p> ID materialRecolectado:</p>     <input type="text" name="materialRecolectado" class="caja">
     {# </div> #}
     {# <div class=""> #}
-  <p>  Marca:</p>   <input type="text" name="marca" class="caja">
+  <p>  Precio:</p>   <input type="text" name="precio" class="caja">
     {# </div> #}
     {# <div class=""> #}
-  <p>   Anio:</p>  <input type="text" name="anio" class="caja">
+  <p>   Fecha:</p>  <input type="text" name="fecha" class="caja">
     {# </div> #}
 
 

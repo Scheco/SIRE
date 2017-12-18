@@ -1,0 +1,44 @@
+{% extends "menu.html" %}
+{% block titulo %}
+  Consular Camiones
+{% endblock %}
+{% block contenido %}
+  <table class="contenedor">
+
+    <p>CONSULTAR CAMIONES</p>
+    <thead>
+      <tr>
+        <th>ID Camiones</th>
+        <th>ID Trabajador</th>
+        <th>Modelo</th>
+        <th>Marca</th>
+        <th>Año</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for reg in registroCamiones  %}
+        <tr style="padding:10px !import">
+            <td>{{reg.idCamion}}</td>
+            <td>{{reg.idTrabajador_id}}</td>
+            <td>{{reg.modelo}}</td>
+            <td>{{reg.marca}}</td>
+            <td>{{reg.anio}}</td>
+            <td>
+                <form action="modificarCamion/" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="idCamion" value="{{reg.idCamion}}">
+                    <button class="botonCorecto">Modificar</button>
+                </form>
+            </td>
+            <td>
+                   <a href="eliminarCamion/?idCamion={{reg.idCamion}}" class="boton-no">Eliminar</a>
+            </td>
+     </tr>
+    </tbody>
+    {% if msg %}
+      <h3 class="text-ok">{{msg}}</h3>
+    {% endif %}
+  </table>
+
+
+{% endblock %}
