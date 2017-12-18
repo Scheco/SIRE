@@ -7,19 +7,19 @@
   <p>MODIFICAR NEGOCIOS</p>
   {% csrf_token %}
   <div>
-    ID Negocio: <input type="text" name="idNegocio" class="caja" value="{{regNe.idNegocio}}" readonly>
+  <p>ID Negocio:</p>   <input type="text" name="idNegocio" class="caja" value="{{regNe.idNegocio}}" readonly class="caja">
   </div>
   <div>
-    ID Proveedor: <input type="text" name="idProveedor" class="caja" value="{{regNe.idProveedores_id}}">
+  <p>ID Proveedor: </p>  <input type="text" name="idProveedor" class="caja" value="{{regNe.idProveedores_id}}" class="caja">
   </div>
   <div>
-    Nombre del negocio <input type="text" name="nombre" class="caja" value="{{regNe.nombre}}">
+<p>Nombre del negocio:</p>     <input type="text" name="nombre" class="caja" value="{{regNe.nombre}}" class="caja">
   </div>
   <div>
-    Domicilio: <input type="text" name="domicilio" class="caja" value={{regNe.domicilio}}>
+  <p> Domicilio:</p>  <input type="text" name="domicilio" class="caja" value={{regNe.domicilio}} class="caja">
   </div>
   <div>
-    Telefono: <input type="tel" name="telefono" class="caja" value={{regNe.telefono}}>
+  <p>Telefono:</p>   <input type="tel" name="telefono" class="caja" value={{regNe.telefono}} class="caja">
   </div>
   <button type="submit" class="boton-ok">Guardar</button>
 
