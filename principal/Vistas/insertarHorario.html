@@ -9,17 +9,17 @@
 {% block contenido %}
 {% load static from staticfiles %}
 <script type="text/javascript" src="{% static 'JS/horarios.js' %}"></script>
-<form class="contenedor" action="insertarHorario/" method="get" onload="validarHora();">
+<form class="contenedor" action="insertarHorario/" method="get">
   {% csrf_token %}
 
   <div class="CajaLogin">
     <br>
-    ID Horario: <input type="text" name="idHorario" class="caja">
+    ID Horario: <input id="horarioid" type="text" name="idHorario" class="caja">
   </div>
 
-  <div class="CajaLogin" action="consultarHorariosNegocios/" method="post">
+  <div class="CajaLogin">
   <br>
-    Id Negocio: <input type="text" name="idNegocio" class="caja">
+    Id Negocio: <input id="negocioid" type="text" name="idNegocio" class="caja">
   </div>
 
   <div class="CajaLogin  ">
@@ -27,7 +27,7 @@
     Lunes:  <input id="lunes" type="checkbox" name="lunes" checked="True" onclick="validarHora();">
   </div>
   <div class="CajaLogin">
-  <input id="idhoralunes" class="caja" type="TimeField" name="horaLunes" placeholder="HH:MM">
+  <input id="idhoralunes" value="12:00" class="caja" type="TimeField" name="horaLunes" placeholder="HH:MM">
   </div>
 
   <div class="CajaLogin">
@@ -35,7 +35,7 @@
     Martes: <input id="martes" type="checkbox" name="martes" onclick="validarHora();">
   </div>
   <div class="CajaLogin">
-  <input id="idhoramartes" class="caja" style="display:none" type="TimeField" name="horaMartes" placeholder="HH:MM">
+  <input id="idhoramartes" value="12:00" class="caja" style="display:none" type="TimeField" name="horaMartes" placeholder="HH:MM">
   </div>
 
   <div class="CajaLogin">
@@ -43,7 +43,7 @@
     Miercoles: <input id="miercoles" type="checkbox" name="miercoles" onclick="validarHora();">
   </div>
   <div class="CajaLogin">
-  <input id="idhoramiercoles" class="caja" style="display:none" type="TimeField" name="horaMiercoles" placeholder="HH:MM">
+  <input id="idhoramiercoles" value="12:00" class="caja" style="display:none" type="TimeField" name="horaMiercoles" placeholder="HH:MM">
   </div>
 
   <div class="CajaLogin">
@@ -51,7 +51,7 @@
     Jueves: <input id="jueves" type="checkbox" name="jueves" onclick="validarHora();">
   </div>
   <div class="CajaLogin">
-  <input id="idhorajueves" class="caja" style="display:none" type="TimeField" name="horaJueves" placeholder="HH:MM">
+  <input id="idhorajueves" value="12:00" class="caja" style="display:none" type="TimeField" name="horaJueves" placeholder="HH:MM">
   </div>
 
   <div class="CajaLogin">
@@ -59,7 +59,7 @@
     Viernes: <input id="viernes" type="checkbox" name="viernes" onclick="validarHora();">
   </div>
   <div class="CajaLogin">
-  <input id="idhoraviernes" class="caja" style="display:none" type="TimeField" name="horaViernes" placeholder="HH:MM">
+  <input id="idhoraviernes" value="12:00" class="caja" style="display:none" type="TimeField" name="horaViernes" placeholder="HH:MM">
   </div>
 
   <div class="CajaLogin">
@@ -67,10 +67,10 @@
     Sabado: <input id="sabado" type="checkbox" name="sabado" onclick="validarHora();">
   </div>
   <div class="CajaLogin">
-  <input id="idhorasabado" class="caja" style="display:none" type="TimeField" name="horaSabado" placeholder="HH:MM">
+  <input id="idhorasabado" value="12:00" class="caja" style="display:none" type="TimeField" name="horaSabado" placeholder="HH:MM">
   </div>
   <br>
-  <button type="submit" class="boton">Guardar</button>
+  <button type="submit" class="boton" onclick="CamposVaciosHorarios();">Guardar</button>
   {% if  msg%}
   <label class="texto-ok">{{msg}}</label>
   {% endif %}

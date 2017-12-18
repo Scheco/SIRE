@@ -53,6 +53,21 @@ if (sabado.checked==true) {
 }else {
   sabadohora.style.display='none'
 }
+}
 
+function CamposVaciosHorarios(){
+  var horarioid = document.getElementById('horarioid').value;
+  var negocioid = document.getElementById('negocioid').value;
 
+  if (negocioid.length<=0) {
+    alert('Favor de llenar el campo Id Negocios');
+    window.location='insertarHorario.html';
+  } else if (horarioid.length<=0) {
+    alert('Favor de llenar el campo Id Horario');
+    window.location='insertarHorario.html';
+  }else
+  if (horarioid.length<=0 && negocioid.length<=0) {
+    alert('Favor de llenar los campos de ID Negocio y Id Horario');
+    window.location='insertarHorario.html';
+  }
 }

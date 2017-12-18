@@ -14,8 +14,6 @@ def insertarHorario(request):
     if  "idHorario" in request.GET and "idNegocio" in request.GET and  "horaLunes" in request.GET and "horaMartes" in request.GET and "horaMiercoles" in request.GET and "horaJueves" in request.GET and "horaViernes" in request.GET and "horaSabado" in request.GET:
             # return render(request,"menu.html",{'msg':'Entra al if'});
             print "Procesando"
-            negocios=Negocios.objects.all()
-            return render(request,"insertarHorario.html",{'negocios':negocios})
 
 
             idHorario = request.GET['idHorario']
@@ -66,7 +64,6 @@ def insertarHorario(request):
             horaSabado = request.GET['horaSabado']
             p = Horarios(idHorario=idHorario,idNegocio_id=idNegocio_id,lunes=lunes,horaLunes=horaLunes,martes=martes,horaMartes=horaMartes,miercoles=miercoles,horaMiercoles=horaMiercoles,jueves=jueves,horaJueves=horaJueves,viernes=viernes,horaViernes=horaViernes,sabado=sabado,horaSabado=horaSabado)
             p.save()
-            # negocios=Negocios.objects.all()
             return render(request,"insertarHorario.html",{'msg': 'Se registro correctamente un nuevo horario'})
     else:
             return render(request,"insertarHorario.html")
