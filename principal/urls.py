@@ -5,6 +5,7 @@ from viewsClientes import *
 from viewTrabajadores import *
 from viewsProveedores import *
 from viewsNegocios import *
+from viewsCamiones import *
 
 urlpatterns = [
 # ----------------URLS proveedores------------------
@@ -13,11 +14,10 @@ url(r'proveedores/$',insertarProveedores),
 
 
 # --------------URLS camino----------------------
-# --------------hay problemas con estas URLS------------
-# url(r'eliminarCamiones/$',eliminarCamion),
-# url(r'modificarCamiones/$',modificarCamion),
-# url(r'consultarCamion/$',consultarCamion),
-# url(r'insertarCamion/$',insertarCamion),
+url(r'eliminarCamiones/$',eliminarCamion),
+url(r'modificarCamiones/$',modificarCamion),
+url(r'consultarCamion/$',consultarCamion),
+url(r'insertarCamion/$',insertarCamion),
 
 
 # -------------URLS proveedores-----------------
