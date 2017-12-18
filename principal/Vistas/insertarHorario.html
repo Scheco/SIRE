@@ -12,26 +12,25 @@
 <form class="contenedor" action="insertarHorario/" method="get">
   {% csrf_token %}
   <div class="CajaLogin">
-<<<<<<< HEAD
+
 <p>ID Horario:</p>     <input type="text" name="idHorario" class="caja">
   </div>
   <div class="CajaLogin" action="consultarHorariosNegocios/" method="post">
   <p> Id Negocio:</p>  <input type="text" name="idNegocio" class="caja">
-=======
     <br>
-    ID Horario: <input id="horarioid" type="number" name="idHorario" class="caja" value="1">
+  <p> ID Horario:</p>  <input id="horarioid" type="number" name="idHorario" class="caja" value="1">
   </div>
 
   <div class="CajaLogin">
   <br>
-    Id Negocio:
+  <p> Id Negocio:</p>
     <input id="negocioid" type="text" name="idNegocio" class="caja" value="1">
     <select>
       {% for reg in negocios %}
       <option value={{reg.idNegocio}}>{{reg.idNegocio}}</option>"
       {% endfor %}
     </select>
->>>>>>> fcea05e9225adba8309ab33b612742be376f8dd1
+
   </div>
   <div class="CajaLogin  ">
   <p> Lunes:</p>   <input id="lunes" type="checkbox" name="lunes" checked="True" onclick="validarHora();">
@@ -69,12 +68,12 @@
   <div class="CajaLogin">
   <input id="idhorasabado" value="12:00" class="caja" style="display:none" type="TimeField" name="horaSabado" placeholder="HH:MM">
   </div>
-<<<<<<< HEAD
+
   <button type="submit" class="boton">Guardar</button>
-=======
+
   <br>
   <button type="submit" class="boton" onclick="CamposVaciosHorarios();">Guardar</button>
->>>>>>> fcea05e9225adba8309ab33b612742be376f8dd1
+
   {% if  msg%}
   <label class="texto-ok">{{msg}}</label>
   {% endif %}
