@@ -30,6 +30,7 @@
             <td>{{reg.telefono}}</td>
 
             <td>
+                
                 <form action="modificarClientes/" method="post">
                     {% csrf_token %}
                     <input type="hidden" name="idCliente" value="{{reg.idCliente}}">

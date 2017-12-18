@@ -42,6 +42,7 @@ def guardarCambiosClientes(request):
     registrosClientes = Clientes.objects.all()
     return render (request, 'consultarClientes.html',{'msg':'Se ha actualizado el registro correctamente','registrosClientes':registrosClientes})
 
+
 def eliminarCliente(request):
     idCliente=request.GET['idCliente']
     clientes=Clientes.objects.filter(idCliente=idCliente)
