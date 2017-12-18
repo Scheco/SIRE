@@ -1,0 +1,40 @@
+{% extends "menu.html" %}
+
+{% block titulo%}
+Nuevo Material Recolectado
+{% endblock %}
+
+{% block contenido %}
+{% if msg %}
+<br>
+<label class="texto-ok">{{msg}}</label>
+{% endif%}
+
+<form  action="/insertarMaterialesRecolectados/" method="post" class="contenedor">
+  {% csrf_token %}
+  <div class="menus">
+    ID Material Recolectado <input type="number" name="idMaterialRecolectado">
+  </div>
+ <div class="menus">
+   Peso <input type="number" name="peso">
+
+ </div>
+ <div class="menus">
+   Fecha <input type="date" name="fecha" >
+ </div>
+
+<div class="menus">
+  ID Camion <input type="number" name="idCamion">
+</div>
+<div class="menus">
+  ID Material <input type="number" name="idMaterial">
+
+</div>
+
+<div class="menus">
+  ID Negocio <input type="number" name="idNegocio">
+</div>
+
+<button type="button" class="button">Guardar</button>
+</form>
+{% endblock %}
