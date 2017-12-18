@@ -13,11 +13,12 @@ url(r'guardarProveedores/$',insertarProveedores),
 url(r'proveedores/$',insertarProveedores),
 
 
-# --------------URLS camino----------------------
+# --------------URLS camiones----------------------
 url(r'eliminarCamiones/$',eliminarCamion),
 url(r'modificarCamiones/$',modificarCamion),
 url(r'consultarCamion/$',consultarCamion),
-url(r'insertarCamion/$',insertarCamion),
+url(r'InsertarCamiones/$',insertarCamion),
+# url(r'guardarCamion/$',insertarCamion),
 
 
 # -------------URLS proveedores-----------------
