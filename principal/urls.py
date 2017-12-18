@@ -58,8 +58,8 @@ url(r'insertarNegocios/$',insertarNegocios),
 url(r'negocios/$',insertarNegocios),
 
 #----------------URLS---------------------------
-url(r'modificarMaterialRecolectado/$',consultarMaterialesRecolectados),
-url(r'consultarMaterialesRecolectados/$',consultarMaterialesRecolectados),
+#url(r'modificarMaterialRecolectado/$',consultarMaterialRecolectado),
+#url(r'consultarMaterialRecolectado/$',consultarMaterialRecolectado),
 url(r'insertarMaterialesRecolectados/$',insertarMaterialesRecolectados),
 url(r'materialRecolectado/$',insertarMaterialesRecolectados),
 
