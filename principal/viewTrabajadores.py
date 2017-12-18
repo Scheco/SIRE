@@ -37,3 +37,15 @@ def modificarTrabajadores(request):
 def feliminarTrabajador(request):
             idTrabajador = request.GET['idTrabajador']
             return render(request, 'eliminarTrabajadores.html', {'idTrabajador':idTrabajador})
+
+
+def guardarTabajador(request):
+    T=Trabajadores(idTrabajador=request.POST["id"])
+    T.nombre = request.POST('Nombre')
+    T.apellidoP = request.POST('Apellido_p')
+    T.apellidoM = request.POST('Apellido_m')
+    T.tipo = request.POST('Tipo')
+    T.edad = request.POST('Edad')
+    T.telefono = request.POST('Telefono')
+    T.licencia = request.POST('Licencia')
+    return render(request,'consultaTrabajadores.html')
