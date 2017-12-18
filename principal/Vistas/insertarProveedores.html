@@ -3,22 +3,17 @@
 {% block titulo %}
    Nuevo Proveedor
 {% endblock %}
-
-
 {% block contenido %}
 {% if msg%}
 <br>
 <label class="texto-ok">{{msg}}</label>
 {% endif %}
-
 <form action="/guardarProveedores/" method="post" class="contenedor">
 {% csrf_token %}
 <p >REGISTRAR PROVEEDORES</p>
   <div>
     {#ID #}
-
     <p>  ID:</p>
-
     <input type="number" name="idProveedor" class="caja" autofocus>
   </div>
   <div>
