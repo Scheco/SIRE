@@ -22,6 +22,7 @@
           <td>{{reg.descripcionMaterial}}</td>
           <td><form action="modificarMateriales/" method="post">
             {% csrf_token %}
+            
             <input type="hidden" name="idMaterial" value="{{reg.idMaterial}}">
             <button class="boton-ok" type="submit">Modificar</button>
           </form>
