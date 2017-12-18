@@ -1,0 +1,18 @@
+{% extends "menu.html" %}
+
+{% block titulo %}
+   Eliminar Clientes
+{% endblock  %}
+
+{% block contenido %}
+<h3>Confirmacion de eliminacion de Clientes</h3>
+<form class="contenedor" action="eliminarCli/" method="post">
+    {% csrf_token %}
+    {% for Cli in clientes %}
+        Nombre del cliente:    {{Cli.nombre}}
+    {% endfor %}
+    <br><br>
+    ID: <input type="text" name="idCliente" value="{{idCliente}}" readonly>
+    <button type="submit" class="boton-no">Confirmar Eliminacion</button>
+</form>
+{% endblock  %}
