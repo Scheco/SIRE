@@ -6,6 +6,7 @@ from viewTrabajadores import *
 from viewsProveedores import *
 
 urlpatterns = [
+url(r'consultarHorarios/$',consultarHorarios),
 url(r'consltarTrabajadores/$',consltarTrabajadores),
 url(r'trabajadores/$',trabajadores),
 url(r'guardarProveedores/$',insertarProveedores),
