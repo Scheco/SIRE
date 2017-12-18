@@ -4,22 +4,22 @@ from viewsHorarios import *
 from viewsClientes import *
 from viewTrabajadores import *
 from viewsProveedores import *
-from viewsMateriales import *
+from viewsNegocios import *
 
 urlpatterns = [
 url(r'consltarTrabajadores/$',consltarTrabajadores),
 url(r'trabajadores/$',trabajadores),
+url(r'insertarNegocios/$',insertarNegocios),
 url(r'guardarProveedores/$',insertarProveedores),
 url(r'proveedores/$',insertarProveedores),
 url(r'insertarTrabajador/$',insertarTrabajador),
 url(r'guardarClientes/$',insertarClientes),
 url(r'insertarHorario/$',insertarHorario),
-url(r'insertarMateriales/$',insertarMateriales),
-url(r'consultarMateriales/$',consultarMateriales),
-url(r'modificarM/$',modificarM),
-url(r'modificarMateriales/$',modificarMateriales),
-url(r'eliminarM/$',eliminarM),
-url(r'eliminarMateriales/$',eliminarMateriales),
+url(r'consultarHorarios/$',consultarHorarios),
+url(r'modificarHorarios/$',modificarHorarios),
+url(r'guardarHorarios/$',guardarHorarios),
+url(r'horariosEliminar/$',horariosEliminar),
+url(r'eliminarHorarios/$',eliminarHorarios),
 url(r'^$',menu)
 
 ]

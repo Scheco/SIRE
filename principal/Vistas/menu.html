@@ -2,24 +2,23 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>{%block titulo %}Titulo Default{% endblock %}</title>
+    <title>{% block titulo %}Titulo Default{% endblock %}</title>
     <!-- Esto es para hacer llamar a los estilos -->
     {% load static from staticfiles %}
     <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
     </head>
   <body>
-      <nav class="contenedor">
 
+      <nav class="menus">
         <a href="proveedores/">Proveedores</a>
-        <a href="/negocios/">Negocios</a>
-        <a href="consultarHorarios/">Horarios</a>
+        <a href="insertarNegocios/">Negocios</a>
+        <a href="insertarHorario/">Horarios</a>
         <a href="trabajadores/">Trabajadores</a>
-        <a href="camiones">Camiones</a>
-        <a href="insertarMateriales">Materiales</a>
+        <a href="InsertarCamiones">Camiones</a>
+        <a href="materiales">Materiales</a>
         <a href="materialRecolectado">Material Recolectado</a>
         <a href="ventas">Ventas</a>
       </nav>
-
 {% block contenido %}
 {% endblock %}
   </body>

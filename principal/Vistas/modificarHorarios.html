@@ -19,7 +19,7 @@
 
   <div class="CajaLogin  ">
     <br>
-    Lunes:  <input type="checkbox" name="lunes" value="{{reg.lunes}}">
+    Lunes:  <input type="checkbox" name="lunes" checked="{{reg.lunes}}">
   </div>
   <div class="CajaLogin">
   <input type="TimeField" name="horaLunes" placeholder="HH:MM" value={{reg.horaLunes}}>
@@ -27,15 +27,15 @@
 
   <div class="CajaLogin">
     <br>
-    Martes: <input type="checkbox" name="martes">
+    Martes: <input type="checkbox" name="martes" checked="{{reg.martes}}">
   </div>
   <div class="CajaLogin">
-  <input type="TimeField" name="horaMartes" placeholder="HH:MM" value="{{reg.martes}}">
+  <input type="TimeField" name="horaMartes" placeholder="HH:MM" value="{{reg.horaMartes}}">
   </div>
 
   <div class="CajaLogin">
     <br>
-    Miercoles: <input type="checkbox" name="miercoles" value="{{reg.miercoles}}">
+    Miercoles: <input type="checkbox" name="miercoles" checked="{{reg.miercoles}}">
   </div>
   <div class="CajaLogin">
   <input type="TimeField" name="horaMiercoles" placeholder="HH:MM" value="{{reg.horaMiercoles}}">
@@ -43,7 +43,7 @@
 
   <div class="CajaLogin">
     <br>
-    Jueves: <input type="checkbox" name="jueves" value="{{reg.jueves}}">
+    Jueves: <input type="checkbox" name="jueves" checked="{{reg.jueves}}">
   </div>
   <div class="CajaLogin">
   <input type="TimeField" name="horaJueves" placeholder="HH:MM" value="{{reg.horaJueves}}">
@@ -51,7 +51,7 @@
 
   <div class="CajaLogin">
     <br>
-    Viernes: <input type="checkbox" name="viernes" value="{{reg.viernes}}">
+    Viernes: <input type="checkbox" name="viernes" checked="{{reg.viernes}}">
   </div>
   <div class="CajaLogin">
   <input type="TimeField" name="horaViernes" placeholder="HH:MM" value="{{reg.horaViernes}}">
@@ -59,10 +59,10 @@
 
   <div class="CajaLogin">
     <br>
-    Sabado: <input type="checkbox" name="sabado" value="sabado">
+    Sabado: <input type="checkbox" name="sabado" checked="{{reg.sabado}}">
   </div>
   <div class="CajaLogin">
-  <input type="TimeField" name="horaSabado" placeholder="HH:MM" value="horaSabado">
+  <input type="TimeField" name="horaSabado" placeholder="HH:MM" value="{{reg.horaSabado}}">
   </div>
   <br>
   <button type="submit" class="boton">Modificar Horario</button>
