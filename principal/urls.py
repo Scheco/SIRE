@@ -24,6 +24,14 @@ url(r'modificarHorarios/$',modificarHorarios),
 url(r'guardarHorarios/$',guardarHorarios),
 url(r'horariosEliminar/$',horariosEliminar),
 url(r'eliminarHorarios/$',eliminarHorarios),
-url(r'^$',menu)
+url(r'eliminarCli/$',eliminarCli),
+url(r'eliminarCliente/$',eliminarCliente),
+url(r'guardarCambiosClientes/$',guardarCambiosClientes),
+url(r'modificarClientes/$',modificarClientes),
+
+url(r'consultarClientes/$',consultarClientes),
+url(r'guardarClientes/$',insertarClientes),
+url(r'clientes/$',insertarClientes),
+url(r'^$',menu),
 
 ]
