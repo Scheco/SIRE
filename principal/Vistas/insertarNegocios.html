@@ -5,21 +5,22 @@
 {% endblock %}
 
 {% block contenido %}
-<p>REGISTRAR  NEGOCIOS</p>
 
-<form action="/insertarNegocios/" class="contenedor" method="post">
+
+<form action="/insertarNegocios/" class="contenedor" method="post"class="caja">
   {% csrf_token %}
+  <p>REGISTRAR  NEGOCIOS</p>
   <div>
-    Id Proveedor: <input type="text" name="idProveedor" class="caja">
+   <p>Id Proveedor:</p>   <input type="text" name="idProveedor" class="caja"class="caja">
   </div>
   <div>
-    Nombre del Negocio: <input type="text" name="nombreNegocio" class="caja">
+<p> Nombre del Negocio:</p>    <input type="text" name="nombreNegocio" class="caja"class="caja">
   </div>
   <div>
-    Domicilio: <input type="text" name="domicilio" class="caja">
+<p> Domicilio:</p>    <input type="text" name="domicilio" class="caja"class="caja">
   </div>
   <div>
-    Telefono: <input type="tel" name="tel" class="caja">
+<p>Telefono:</p>     <input type="tel" name="tel" class="caja"class="caja">
   </div>
   <button type="submit" class="boton">Agregar</button><br>
   {% if msg%}
