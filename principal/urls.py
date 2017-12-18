@@ -11,7 +11,17 @@ url(r'trabajadores/$',trabajadores),
 url(r'guardarProveedores/$',insertarProveedores),
 url(r'proveedores/$',insertarProveedores),
 url(r'insertarTrabajador/$',insertarTrabajador),
+
+url(r'eliminarCli/$',eliminarCli),
+url(r'eliminarCliente/$',eliminarCliente),
+url(r'guardarCambiosClientes/$',guardarCambiosClientes),
+url(r'modificarClientes/$',modificarClientes),
+
+url(r'consultarClientes/$',consultarClientes),
 url(r'guardarClientes/$',insertarClientes),
+url(r'clientes/$',insertarClientes),
+
+
 url(r'insertarHorario/$',insertarHorario),
 url(r'^$',menu)
 
