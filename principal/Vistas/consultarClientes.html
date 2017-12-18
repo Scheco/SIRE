@@ -1,0 +1,51 @@
+{% extends "menu.html" %}
+
+{% block contenido  %}
+{% if msg %}
+<h3 class="texto-ok">{{msg}}</h3>
+{% endif %}
+<table>
+    <thead>
+        <tr>
+            <th>ID Cliente</th>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>ID Material</th>
+            <th>Domicilio</th>
+            <th>Telefono</th>
+            <th>Modificar</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for reg in registrosClientes  %}
+        <tr style="padding:10px !import">
+            <td>{{reg.idCliente}}</td>
+            <td>{{reg.nombre}}</td>
+            <td>{{reg.apellidoP}}</td>
+            <td>{{reg.apellidoM}}</td>
+            <td>{{reg.idMaterial_id}}</td>
+            <td>{{reg.domicilio}}</td>
+            <td>{{reg.telefono}}</td>
+
+            <td>
+                
+                <form action="modificarClientes/" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="idCliente" value="{{reg.idCliente}}">
+                    <button class="botonCorecto">Modificar</button>
+                </form>
+            </td>
+            <td>
+               <a href="eliminarCliente/?idCliente={{reg.idCliente}}" class="boton-no">Eliminar</a>
+            </td>
+        </tr>
+
+
+        {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock  %}

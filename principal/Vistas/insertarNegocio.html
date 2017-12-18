@@ -3,11 +3,10 @@
 {% block titulo %}
   Insertar Negocio
 {% endblock %}
-
+<h1>Agregar Negocio</h1>
 {% block contenido %}
-<p>REGISTRAR  NEGOCIOS</p>
-
-<form action="/insertarNegocios/" class="contenedor" method="post">
+<h1>Agregar Negocio</h1>
+<form action="/insertarNegocio/" class="contenedor" method="post">
   {% csrf_token %}
   <div>
     Id Proveedor: <input type="text" name="idProveedor" class="caja">
@@ -21,12 +20,9 @@
   <div>
     Telefono: <input type="tel" name="tel" class="caja">
   </div>
-  <button type="submit" class="boton">Agregar</button><br>
-  {% if msg%}
-  <label class="texto-ok">{{msg}}</label>
-  {% endif %}
-</form>
+  <button type="submit" class="boton-ok">Agregar</button>
 
+</form>
 
 
 {% endblock %}
