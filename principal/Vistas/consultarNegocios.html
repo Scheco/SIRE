@@ -1,0 +1,52 @@
+{% extends "menu.html" %}
+{% block titulo %}
+  Consular Negocios
+{% endblock %}
+{% block contenido %}
+  <table class="contenedor">
+    <p>h1CONSULTAR NEGOCIOS</p>
+
+    <thead>
+      <tr>
+        <th>ID Negocio</th>
+        <th>Nombre del Negocio</th>
+        <th>Nombre del Proveedor</th>
+        <th>Domicilio</th>
+        <th>Telefono</th>
+        <th>Modificar</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for regNeg in registroNegocios %}
+          <tr>
+            <td>{{regNeg.idNegocio}}</td>
+            <td>{{regNeg.nombre}}</td>
+            <td>
+            {% for prove in registroProveedores %}
+              {% if regNeg.idProveedores_id == prove.idProveedores %}
+                {{prove.nombre}}
+              {% endif %}
+            {% endfor %}
+            </td>
+            <td>{{regNeg.domicilio}}</td>
+            <td>{{regNeg.telefono}}</td>
+            <td>
+              <form style="border: 0px" action="/consultarNegocios/modificarNegocio/" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="idNegocio" value="{{regNeg.idNegocio}}"><button class="boton">Modificar</button>
+              </form>
+            </td>
+            <td>
+              <a href="eliminarNeg/?idNegocio={{regNeg.idNegocio}}" class="boton-no">Eliminar</a>
+            </td>
+          </tr>
+      {% endfor %}
+    </tbody>
+    {% if msg %}
+      <h3 class="text-ok">{{msg}}</h3>
+    {% endif %}
+  </table>
+
+
+{% endblock %}

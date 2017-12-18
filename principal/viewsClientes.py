@@ -18,38 +18,6 @@ def insertarClientes(request):
             telefono = request.POST['telefono']
             Cl = Clientes(idCliente=idCliente,nombre=nombre,apellidoP=apellidoP,apellidoM=apellidoM,domicilio=domicilio,telefono=telefono,idMaterial_id=idMaterial)
             Cl.save()
-            return render(request,'insertarClientes.html')
+            return render(request,'menu.html')
     else:
         return render(request,'insertarClientes.html')
-
-def consultarClientes(request):
-    registrosClientes = Clientes.objects.all()
-    return render (request,'consultarClientes.html',{'registrosClientes':registrosClientes})
-
-def modificarClientes(request):
-    registroClientes = Clientes.objects.get(idCliente=request.POST['idCliente'])
-    return render(request,'modificarClientes.html',{'reg':registroClientes})
-
-def guardarCambiosClientes(request):
-    Cl = Clientes(idCliente = request.POST['idCliente'])
-    Cl.idMaterial_id=request.POST['idMaterial']
-    Cl.nombre=request.POST['nombre']
-    Cl.apellidoP=request.POST['apellidoP']
-    Cl.apellidoM=request.POST['apellidoM']
-    Cl.domicilio=request.POST['domicilio']
-    Cl.telefono=request.POST['telefono']
-    Cl.save()
-    registrosClientes = Clientes.objects.all()
-    return render (request, 'consultarClientes.html',{'msg':'Se ha actualizado el registro correctamente','registrosClientes':registrosClientes})
-
-
-def eliminarCliente(request):
-    idCliente=request.GET['idCliente']
-    clientes=Clientes.objects.filter(idCliente=idCliente)
-    return render(request,'eliminarClientes.html',{'idCliente':idCliente,'clientes':clientes})
-
-def eliminarCli(request):
-    Cl = Clientes(idCliente = request.POST['idCliente'])
-    Cl.delete()
-    registrosClientes = Clientes.objects.all()
-    return render (request, 'consultarClientes.html',{'msg':'Se ha eliminado el registro','registrosClientes':registrosClientes})

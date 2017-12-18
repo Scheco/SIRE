@@ -1,0 +1,16 @@
+{% extends "menu.html" %}
+{% block titulo %}
+  Eliminar Horarios
+{% endblock %}
+
+{% block contenido %}
+<p>Confirmar Eliminacion De Un Horario</p>
+<form class="contenedor" action="/eliminarHorarios/" method="post">
+  {% csrf_token %}
+  <br><br>
+  {# ID: <input type="text" name="idHorario" value="{{idHorario}}"> #}
+  <button type="submit" class="boton-no">Confirmar eliminacion</button>
+
+</form>
+
+{% endblock %}

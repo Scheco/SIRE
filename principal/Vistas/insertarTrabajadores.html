@@ -8,39 +8,31 @@
 {% block contenido %}
 {% if msg%}
 <br>
+
 <label class="texto-ok">{{msg}}</label>
 {% endif %}
+
+
 <form action="/insertarTrabajador/" method="post" class="contenedor">
 {% csrf_token %}
-<br>
-{# <div>#}
-  {# ID:#}
-  {# <br>#}
-  {# <input type="text" name="id_Trbajador" class="caja" autofocus>#}
-{# </div>#}
+                    <p>REGISTRO DE TRABAJADORES</p>
 <div>
-  <br>
-  Nombre:
-  <br>
+  <p>  Nombre:</p>
   <input type="text" name="Nombre" class="caja">
 </div>
 <div>
-  <br>
-  Apellido Paterno:
-  <br>
+  <p>  Apellido Paterno:</p>
   <input type="text" name="Apellido_p" class="caja">
 </div>
 <div>
-  <br>
-  Apellido Materno:
-  <br>
+  <p>  Apellido Materno:</p>
   <input type="text" name="Apellido_m" class="caja">
 </div>
 <div>
-  <br>
-  Tipo:
-  <br>
-  <select name="Tipo" >
+<p>  Tipo:</p>
+
+
+<p>  <select name="Tipo" class="caja"></p>
     <option value="Chofer">Chofer</option>
     <option value="Secretaria">Secretaria</option>
 
@@ -48,25 +40,19 @@
 </select>
 </div>
 <div>
-  <br>
-  Edad:
-  <br>
+  <p>Edad:</p>
   <input type="text" name="Edad" class="caja">
 </div>
 <div>
-  <br>
-  Telefono:
-  <br>
+<p>  Telefono:</p>
   <input type="text" name="Telefono" class="caja">
 </div>
 <div>
-  <br>
-  Licencia:
-  <br>
+<p>Licencia:</p>
   <input type="text" name="Licencia" class="caja">
 </div>
-<br>
-<button type="submit" class="boton-ok">Registrar</button>
+
+<button type="submit" class="boton">Registrar</button>
 
 </form>
 

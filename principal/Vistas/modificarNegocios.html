@@ -1,0 +1,28 @@
+{% extends "menu.html" %}
+{% block titulo %}
+  Modificar Negocio
+{% endblock %}
+{% block contenido %}
+<form action="/guardarNegocios/" class="contenedor"  method="post">
+  <p>MODIFICAR NEGOCIOS</p>
+  {% csrf_token %}
+  <div>
+    ID Negocio: <input type="text" name="idNegocio" class="caja" value="{{regNe.idNegocio}}" readonly>
+  </div>
+  <div>
+    ID Proveedor: <input type="text" name="idProveedor" class="caja" value="{{regNe.idProveedores_id}}">
+  </div>
+  <div>
+    Nombre del negocio <input type="text" name="nombre" class="caja" value="{{regNe.nombre}}">
+  </div>
+  <div>
+    Domicilio: <input type="text" name="domicilio" class="caja" value={{regNe.domicilio}}>
+  </div>
+  <div>
+    Telefono: <input type="tel" name="telefono" class="caja" value={{regNe.telefono}}>
+  </div>
+  <button type="submit" class="boton-ok">Guardar</button>
+
+</form>
+
+{% endblock %}

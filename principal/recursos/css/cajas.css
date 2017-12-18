@@ -1,0 +1,21 @@
+.caja,
+.caja-error {
+  border: 0.5px solid lightgray;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 10px #ffffff;
+  box-shadow: 0px 0px 10px #ffffff;
+  margin: 3px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.caja:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 10px skyblue;
+  box-shadow: 0px 0px 10px skyblue;
+}
+.caja-error {
+  border: 0.5px solid #d44018;
+  -webkit-box-shadow: 0px 0px 10px #ee8264;
+  box-shadow: 0px 0px 10px #ee8264;
+}

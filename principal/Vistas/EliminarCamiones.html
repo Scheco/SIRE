@@ -7,6 +7,7 @@
 {% block contenido  %}
 <form class="contenedor" action="/eliminarCamiones/" method="post">
      {% csrf_token %}
+     <p>ELIMINAR CAMIONES</p>
     <div class="">
       ID Camion: <input type="number" name="idCamion">
     </div>
