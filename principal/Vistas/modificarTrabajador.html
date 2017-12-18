@@ -1,0 +1,78 @@
+{% extends "menu.html" %}
+
+{% block titulo %}
+   Modificar Trabajador
+{% endblock %}
+
+
+{% block contenido %}
+{% if msg%}
+<br>
+<label class="texto-ok">{{msg}}</label>
+{% endif %}
+<form action="/guardarCambiosTrabajadores/" method="post" class="contenedor">
+  <p>Modificar Trabajadores</p>
+{% csrf_token %}
+  <br>
+  <div>
+    ID:
+    <br>
+    <input type="text" name="idTrabajador" class="caja" value="{{reg.idTrabajador}}" readonly>
+  </div>
+  <div>
+    <br>
+    Nombre:
+    <br>
+    <input type="text" name="nombreTrabajador" class="caja" value="{{reg.nombre}}">
+  </div>
+  <div>
+    <br>
+    Apellido Paterno:
+    <br>
+    <input type="text" name="apellidoP" class="caja" value="{{reg.apellidoP}}">
+  </div>
+  <div>
+    <br>
+    Apellido Materno:
+    <br>
+    <input type="text" name="apellidoM" class="caja" value="{{reg.apellidoM}}">
+  </div>
+
+  <div>
+  <p>  Tipo:</p>
+
+
+  <p>  <select name="Tipo" class="caja"></p>
+      <option value="Chofer">Chofer</option>
+      <option value="Secretaria">Secretaria</option>
+
+
+  </select>
+
+
+  <div>
+
+
+    <br>
+    Edad:
+    <br>
+    <input type="number" name="edad" class="caja" value="{{reg.edad}}">
+  </div>
+
+  <div>
+    <br>
+    Telefono:
+    <br>
+    <input type="tel" name="telefono" class="caja" value="{{reg.telefono}}">
+  </div>
+  <div>
+    <br>
+    Licencia:
+    <br>
+    <input type="text" name="Licencia" class="caja" value="{{reg.licencia}}">
+  </div>
+  <br>
+  <button type="submit" class="boton-ok">Modificar</button>
+
+</form>
+{% endblock %}
