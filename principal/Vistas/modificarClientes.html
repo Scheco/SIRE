@@ -1,0 +1,40 @@
+{% extends "menu.html" %}
+
+{% block titulo  %}
+Modificar Clientes
+{% endblock  %}
+
+{% block contenido  %}
+{% if msg%}
+
+<br>
+<label class="texto-ok">{{msg}}</label>
+{% endif %}
+<form class="contenedor" action="/guardarCambiosClientes/" method="post">
+    {% csrf_token %}
+    <div class="">
+      ID Cliente: <input type="text" name="idCliente" value="{{reg.idCliente}}" readonly>
+    </div>
+    <div class="">
+      ID Material: <input type="number" name="idMaterial" value="{{reg.idMaterial_id}}">
+    </div>
+    <div class="">
+      Nombre: <input type="text" name="nombre" value="{{reg.nombre}}">
+
+    </div>
+    <div class="">
+      Apellido Paterno: <input type="text" name="apellidoP" value="{{reg.apellidoP}}">
+
+    </div>
+    <div class="">
+      Apellido Materno: <input type="text" name="apellidoM" value="{{reg.apellidoM}}">
+    </div>
+    <div class="">
+     Domicilio: <input type="text" name="domicilio" value="{{reg.domicilio}}">
+    </div>
+    <div class="">
+        Telefono: <input type="number" name="telefono" value="{{reg.telefono}}">
+    </div>
+    <button type="submit" class="boton-ok" >Guardar Cambios</button>
+</form>
+{% endblock  %}

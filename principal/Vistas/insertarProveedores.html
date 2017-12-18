@@ -3,6 +3,8 @@
 {% block titulo %}
    Nuevo Proveedor
 {% endblock %}
+
+
 {% block contenido %}
 {% if msg%}
 <br>
@@ -10,47 +12,52 @@
 {% endif %}
 <form action="/guardarProveedores/" method="post" class="contenedor">
 {% csrf_token %}
-<p >REGISTRAR PROVEEDORES</p>
+  <br>
   <div>
     {#ID #}
-    <p>  ID:</p>
+    ID:
+    <br>
     <input type="number" name="idProveedor" class="caja" autofocus>
   </div>
   <div>
-  <p>Nombre:</p>
+    <br>
+    Nombre:
+    <br>
     <input type="text" name="nombreProveedor" class="caja">
   </div>
   <div>
-<p>Apellido Paterno:</p>
+    <br>
+    Apellido Paterno:
+    <br>
     <input type="text" name="apellidoP" class="caja">
   </div>
   <div>
-<p>  Apellido Materno:</p>
-
-
+    <br>
+    Apellido Materno:
+    <br>
     <input type="text" name="apellidoM" class="caja">
   </div>
   <div>
-    <p>Edad:</p>
-
-
+    <br>
+    Edad:
+    <br>
     <input type="number" name="edad" class="caja">
   </div>
 
   <div>
-    <p>Telefono:</p>
-
-
+    <br>
+    Telefono:
+    <br>
     <input type="tel" name="telefono" class="caja">
   </div>
   <div>
-<p>Domicilio:
-</p>
-
+    <br>
+    Domicilio:
+    <br>
     <input type="text" name="domicilio" class="caja">
   </div>
   <br>
-  <button type="submit" class="boton">Registrar</button>
+  <button type="submit" class="boton-ok">Registrar</button>
 
 </form>
 

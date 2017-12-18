@@ -54,7 +54,7 @@ class Camiones(models.Model):
     anio = models.CharField(max_length=4)
 
 class Materiales(models.Model):
-    idMaterial = models.AutoField(primary_key=True)
+    idMaterial = models.IntegerField(primary_key=True)
     tipo = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=200)
 

@@ -26,14 +26,6 @@ def insertarTrabajador(request):
 def trabajadores(request):
     return render(request,'insertarTrabajadores.html')
 
-def consultarTrabajadores(request):
+def consltarTrabajadores(request):
     consulta=Trabajadores.objects.all()
     return render(request, 'consultaTrabajadores.html',{'Trabajadores':consulta})
-
-def modificarTrabajadores(request):
-        registro = Trabajadores.objects.get(idTrabajador=request.POST['idTrabajador'])
-        return render (request, 'modificarTrabajador.html', {'reg':registro})
-
-def feliminarTrabajador(request):
-            idTrabajador = request.GET['idTrabajador']
-            return render(request, 'eliminarTrabajadores.html', {'idTrabajador':idTrabajador})
