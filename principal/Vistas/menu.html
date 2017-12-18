@@ -5,12 +5,12 @@
     <title>{% block titulo %}Titulo Default{% endblock %}</title>
     <!-- Esto es para hacer llamar a los estilos -->
     {% load static from staticfiles %}
-    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
     </head>
   <body>
 
 
-      <nav class="menus">
+      <!-- <nav class="menus">
         <a href="proveedores/">Proveedores</a>
         <a href="/clientes/">Clientes</a>
         <a href="/insertarNegocios/">Negocios</a>
@@ -20,7 +20,65 @@
         <a href="materiales">Materiales</a>
         <a href="materialRecolectado">Material Recolectado</a>
         <a href="ventas">Ventas</a>
-      </nav>
+      </nav> -->
+      <nav class="barraMenu2">
+      <ul class="menu2">
+        <li><a class="modificado" href="#">Proveedores</a>
+            <ul class="subMenu2">
+              <li><a class="modificado" href="#">Agregar Proveedor</a></li>
+              <li><a class="modificado" href="#">Consultar Proveedores</a></li>
+            </ul>
+        </li>
+        <li><a class="modificado" href="#">Clientes</a>
+            <ul class="subMenu2">
+              <li><a class="modificado" href="#">Agregar Cliente</a></li>
+              <li><a class="modificado" href="#">Consultar Clientes</a></li>
+            </ul>
+        </li>
+        <li><a class="modificado" href="#">Negocios</a>
+            <ul class="subMenu2">
+              <li><a class="modificado" href="#">Agregar Negocio</a></li>
+              <li><a class="modificado" href="#">Consultar Negocios</a></li>
+            </ul>
+        </li>
+        <li><a class="modificado" href="#">Horarios</a>
+            <ul class="subMenu2">
+              <li><a class="modificado" href="#">Agregar Horario</a></li>
+              <li><a class="modificado" href="#">Consultar Horarios</a></li>
+            </ul>
+        </li>
+        <li><a class="modificado" href="#">Trabajadores</a>
+            <ul class="subMenu2">
+              <li><a class="modificado" href="#">Agregar Trabajador</a></li>
+              <li><a class="modificado" href="#">Consultar Trabajadores</a></li>
+            </ul>
+        </li>
+        <li><a class="modificado" href="#">Camiones</a>
+            <ul class="subMenu2">
+              <li><a class="modificado" href="#">Agregar Camion</a></li>
+              <li><a class="modificado" href="#">Consultar Camiones</a></li>
+            </ul>
+        </li>
+        <li><a class="modificado" href="#">Materiales</a>
+            <ul class="subMenu2">
+              <li><a class="modificado" href="#">Agregar Material</a></li>
+              <li><a class="modificado" href="#">Consultar Materiales</a></li>
+            </ul>
+        </li>
+        <li><a class="modificado" href="#">Material Recolectable</a>
+            <ul class="subMenu2">
+              <li><a class="modificado" href="#">Agregar Material</a></li>
+              <li><a class="modificado" href="#">Consultar Materiales</a></li>
+            </ul>
+        </li>
+        <li><a class="modificado" href="#">Ventas</a>
+            <ul class="subMenu2">
+              <li><a class="modificado" href="#">Agregar Venta</a></li>
+              <li><a class="modificado" href="#">Consultar Ventas</a></li>
+            </ul>
+        </li>
+      </ul>
+    </nav>
 {% block contenido %}
 {% endblock %}
   </body>

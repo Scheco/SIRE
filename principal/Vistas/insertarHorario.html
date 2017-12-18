@@ -9,7 +9,7 @@
 {% block contenido %}
 {% load static from staticfiles %}
 <script type="text/javascript" src="{% static 'JS/horarios.js' %}"></script>
-<form class="contenedor" action="insertarHorario/" method="get">
+<form class="contenedorh" action="insertarHorario/" method="get">
   {% csrf_token %}
   <div class="CajaLogin">
 <p>INSERTAR HORARIOS</p>
@@ -20,7 +20,6 @@
     <br>
   <p> ID Horario:</p>  <input id="horarioid" type="number" name="idHorario" class="caja" value="1">
   </div>
-
   <div class="CajaLogin">
   <br>
   <p> Id Negocio:</p>
@@ -68,12 +67,9 @@
   <div class="CajaLogin">
   <input id="idhorasabado" value="12:00" class="caja" style="display:none" type="TimeField" name="horaSabado" placeholder="HH:MM">
   </div>
-
   <button type="submit" class="boton">Guardar</button>
-
   <br>
   <button type="submit" class="boton" onclick="CamposVaciosHorarios();">Guardar</button>
-
   {% if  msg%}
   <label class="texto-ok">{{msg}}</label>
   {% endif %}
