@@ -1,33 +1,16 @@
 {% extends "menu.html" %}
 
 {% block titulo %}
- Eliminar Camión
-{% endblock  %}
-
-{% block contenido  %}
-<form class="contenedor" action="/eliminarCamiones/" method="post">
-     {% csrf_token %}
-     <p>ELIMINAR CAMIONES</p>
-    <div class="">
-      ID Camion: <input type="number" name="idCamion">
-    </div>
-    <div class="">
-      ID Trabajador <input type="number" name="idTrabajador">
-    </div>
-    <div class="">
-      Modelo: <input type="text" name="modelo">
-    </div>
-    <div class="">
-      Marca: <input type="text" name="marca">
-    </div>
-    <div class="">
-      Anio: <input type="text" name="anio">
-    </div>
-
-
-    <button type="submit" class="boton-no" >Eliminar</button>
+Eliminacion de Camiones
+<p>ELIMINAR CAMION<p>
+{% endblock %}
+{% block contenido %}
+<h3>Confirmacion de eliminacion de Camion</h3>
+<form class="contenedor" action="eliminarCamion/" method="post">
+  {% csrf_token %}
+  <br>
+  ID:
+  <input type="text" name="idCamiones" value="{{idCamiones}}" readonly>
+  <button type="submit" class="boton-no">Confirmo eliminacion</button>
 </form>
-
-
-
-{% endblock  %}
+{% endblock %}
