@@ -7,6 +7,10 @@ from viewsProveedores import *
 from viewsNegocios import *
 
 urlpatterns = [
+url(r'eliminarCamiones/$',eliminarCamion),
+url(r'modificarCamiones/$',modificarCamion),
+url(r'consultarCamion/$',consultarCamion),
+url(r'insertarCamion/$',insertarCamion),
 url(r'consltarTrabajadores/$',consltarTrabajadores),
 url(r'trabajadores/$',trabajadores),
 url(r'insertarNegocios/$',insertarNegocios),
