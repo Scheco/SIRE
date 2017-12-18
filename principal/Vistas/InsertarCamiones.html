@@ -12,7 +12,14 @@
       ID Camion: <input type="text" name="idCamion">
     </div>
     <div class="">
-      ID Trabajador <input type="text" name="idTrabajador">
+      ID Trabajador
+
+      <select>
+        {% for reg in trabajadores %}
+        print "<option value=\"".reg.idTrabajador."\">".reg.idTrabajador."</option>"
+        {% endfor %}
+      </select>
+
     </div>
     <div class="">
       Modelo: <input type="text" name="modelo">
