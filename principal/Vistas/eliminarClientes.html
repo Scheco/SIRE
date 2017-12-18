@@ -5,14 +5,15 @@
 {% endblock  %}
 
 {% block contenido %}
-<h3>Confirmacion de eliminacion de Clientes</h3>
 <form class="contenedor" action="eliminarCli/" method="post">
     {% csrf_token %}
+
+    <p>Confirmacion de eliminacion de Clientes</p>
     {% for Cli in clientes %}
-        Nombre del cliente:    {{Cli.nombre}}
+  <p>  Nombre del cliente:</p>        {{Cli.nombre}}
     {% endfor %}
     <br><br>
-    ID: <input type="text" name="idCliente" value="{{idCliente}}" readonly>
+  <p> ID:</p>  <input type="text" name="idCliente" value="{{idCliente}}" readonlyC class="caja">
     <button type="submit" class="boton-no">Confirmar Eliminacion</button>
 </form>
 {% endblock  %}

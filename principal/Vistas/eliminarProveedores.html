@@ -5,11 +5,12 @@ Eliminacion de Proveedor
 <p>ELIMINAR  PORVEEDORES<p>
 {% endblock %}
 {% block contenido %}
-<h3>Confirmacion de eliminacion de Proveedor</h3>
 <form class="contenedor" action="eliminarProveedor/" method="post">
   {% csrf_token %}
-  <br>
-  ID:
+
+  <p>CONFIRMAR ELIMANACION DE CLIENTE</p>
+  
+  <p>ID:</p>
   <input type="text" name="idProveedores" value="{{idProveedores}}" readonly>
   <button type="submit" class="boton-no">Confirmo eliminacion</button>
 </form>

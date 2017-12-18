@@ -12,7 +12,7 @@ Modificar Clientes
 <form class="contenedor" action="/guardarCambiosClientes/" method="post">
     {% csrf_token %}
     {# <div class=""> #}
-  <p>  ID Cliente:</p>   <input type="text" class="caja" name="idCliente" value="{{reg.idCliente}}" readonly>
+  <p>  ID Cliente:</p>   <input type="text" class="caja"name="idCliente" value="{{reg.idCliente}}" readonly>
     {# </div> #}
     {# <div class=""> #}
   <p> ID Material:</p>    <input type="number" class="caja" name="idMaterial" value="{{reg.idMaterial_id}}">
