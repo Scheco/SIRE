@@ -1,0 +1,34 @@
+{% extends "menu.html" %}
+
+{% block contenido %}
+    {% if msg%}
+    <br>
+    <label class="texto-ok">{{msg}}</label>
+    {% endif %}
+    <table class="contenedor">
+      <p>CONSULTAR MATERIALES</p>
+      <thead>
+        <tr>
+          <th>ID del Material</th>
+          <th>Nombre del Material</th>
+          <th>Descripcion</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for reg in registroMaterial %}
+        <tr>
+          <td>{{reg.idMaterial}}</td>
+          <td>{{reg.nombreMaterial}}</td>
+          <td>{{reg.descripcionMaterial}}</td>
+          <td><form action="modificarMateriales/" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="idMaterial" value="{{reg.idMaterial}}">
+            <button class="boton-ok" type="submit">Modificar</button>
+          </form>
+          <td>
+          <a href="eliminarMaterial/?idMaterial={{reg.idMaterial}}" class="boton-no">Eliminar</a>
+          </td>
+        {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}

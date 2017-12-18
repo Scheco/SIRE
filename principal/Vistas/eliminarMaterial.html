@@ -1,0 +1,16 @@
+{% extends "menu.html" %}
+{% block titulo %}
+  Eliminacion de de Material
+{% endblock %}
+
+{% block contenido %}
+<p>CONFIRMACION DE ELIMINAR MATERIAL</p>
+<form class="contenedor" action="/eliminarMaterial/" method="post">
+  {% csrf_token %}
+  <br>
+  ID: <input type="text" name="idMaterial" value="{{idMaterial}}" readonly>
+  <button type="submit" class="boton-no">Confirmar eliminacion</button>
+
+</form>
+
+{% endblock %}

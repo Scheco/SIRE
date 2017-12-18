@@ -1,0 +1,24 @@
+{% extends "menu.html" %}
+{% block titulo %}
+  Modificar MATERIAL
+{% endblock %}
+{% block contenido %}
+<form action="/guardarMaterial/" class="contenedor"  method="post">
+  <p>MODIFICAR MATERIAL</p>
+  {% csrf_token %}
+  <div>
+    ID MATERIAL: <input type="text" name="idMaterial" class="caja" value="{{regNe.idMaterial}}" readonly>
+  </div>
+
+  <div>
+    Tipo de Material <input type="text" name="tipoMaterial" class="caja" value="{{regNe.tipoMaterial}}">
+  </div>
+  <div>
+    Descripcion del Material:
+    <input type="text" name="descripcionMaterial" class="caja" value="{{regNe.descripcionMaterial}}">
+  </div>
+  <button type="submit" class="boton-ok">Guardar</button>
+
+</form>
+
+{% endblock %}
