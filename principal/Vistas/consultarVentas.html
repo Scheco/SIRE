@@ -1,0 +1,44 @@
+{% extends "menu.html" %}
+{% block titulo %}
+  Consular Ventas
+{% endblock %}
+{% block contenido %}
+  <table class="contenedor">
+
+    <p>CONSULTAR Ventas</p>
+    <thead>
+      <tr>
+        <th>ID Venta</th>
+        <th>ID Cliente</th>
+        <th>ID Material Recolectado</th>
+        <th>Precio</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for reg in registroVentas  %}
+        <tr style="padding:10px !import">
+            <td>{{reg.idVenta}}</td>
+            <td>{{reg.idCliente_id}}</td>
+            <td>{{reg.material}}</td>
+            <td>{{reg.precio}}</td>
+            <td>{{reg.fecha}}</td>
+            <td>
+                <form action="modificarVenta/" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="idVenta" value="{{reg.idVenta}}">
+                    <button class="botonCorecto">Modificar</button>
+                </form>
+            </td>
+            <td>
+                   <a href="eliminarVenta/?idVenta={{reg.idCamion}}" class="boton-no">Eliminar</a>
+            </td>
+     </tr>
+    </tbody>
+    {% if msg %}
+      <h3 class="text-ok">{{msg}}</h3>
+    {% endif %}
+  </table>
+
+
+{% endblock %}
