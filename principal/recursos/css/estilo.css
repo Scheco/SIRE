@@ -159,7 +159,8 @@ a {
   margin: 50px -60px -15px 250px;
   padding: 0px 10px 18px 30px;
 }
-p {
+p,
+th {
   margin: 20px  0px 0px 0px;
   padding: 0px 0px -8px 0px;
   font-size: 23px;
