@@ -1,0 +1,41 @@
+{% extends "menu.html" %}
+
+{% block titulo %}
+  Nueva Venta
+{% endblock  %}
+
+{% block contenido  %}
+<form class="contenedor" action="/guardarVenta/" method="post">
+  <p>REGISTRAR  VENTAS</p>
+     {% csrf_token %}
+    <div class="">
+      ID Venta: <input type="text" name="idVenta" class="caja">
+    </div>
+    <div class="">
+      ID CLIENTE <input type="text" name="idCliente" class="caja">
+    </div>
+
+      <select>
+        {% for reg in trabajadores %}
+        print "<option value=\"".reg.idVenta."\">".reg.idVenta."</option>"
+        {% endfor %}
+      </select>
+
+    </div>
+    <div class="">
+      IdMaterialRecolectado: <input type="text" name="materialRecolectado" class="caja">
+    </div>
+    <div class="">
+      Precio: <input type="text" name="precio" class="caja">
+    </div>
+    <div class="">
+      Fecha: <input type="text" name="fecha" class="caja">
+    </div>
+
+
+    <button type="submit" class="boton" >Insertar</button>
+</form>
+
+
+
+{% endblock  %}

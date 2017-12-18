@@ -1,0 +1,33 @@
+{% extends "menu.html" %}
+
+{% block titulo %}
+Modificar Camión
+{% endblock  %}
+
+{% block contenido  %}
+<form class="contenedor" action="/modificarCamiones/" method="post">
+  <p>MODIFICAR Ventas</p>
+     {% csrf_token %}
+    {# <div class=""> #}
+    <p>ID Venta: </p>  <input type="number" name="idVenta" class="caja">
+    {# </div> #}
+    {# <div class=""> #}
+  <p> ID Cliente</p>    <input type="number" name="idCliente" class="caja">
+    {# </div> #}
+    {# <div class=""> #}
+  <p> ID materialRecolectado:</p>     <input type="text" name="materialRecolectado" class="caja">
+    {# </div> #}
+    {# <div class=""> #}
+  <p>  Precio:</p>   <input type="text" name="precio" class="caja">
+    {# </div> #}
+    {# <div class=""> #}
+  <p>   Fecha:</p>  <input type="text" name="fecha" class="caja">
+    {# </div> #}
+
+
+    <button type="submit" class="boton-ok" >Modificar</button>
+</form>
+
+
+
+{% endblock  %}
