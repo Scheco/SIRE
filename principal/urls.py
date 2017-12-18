@@ -14,16 +14,6 @@ url(r'guardarProveedores/$',insertarProveedores),
 url(r'proveedores/$',insertarProveedores),
 
 
-# --------------URLS camiones----------------------
-url(r'eliminarCamiones/$',feliminarCamion),
-url(r'eliminarCamiones/$',eliminarCamion),
-url(r'modificarCamiones/$',modificarCamion),
-url(r'consultarCamiones/$',guardarCamion),
-url(r'consultarCamiones/$',consultarCamion),
-url(r'InsertarCamiones/$',insertarCamion),
-url(r'camiones/$',insertarCamion),
-# url(r'guardarCamion/$',insertarCamion),
-
 
 # -------------URLS proveedores-----------------
 # url(r'consltarTrabajadores/$',consltarTrabajadores),      (hay problemas con esta url)
@@ -57,14 +47,20 @@ url(r'consultarNegocios/$',consultarNegocios),
 url(r'insertarNegocios/$',insertarNegocios),
 url(r'negocios/$',insertarNegocios),
 
-#----------------URLS---------------------------
-#url(r'modificarMaterialRecolectado/$',consultarMaterialRecolectado),
-#url(r'consultarMaterialRecolectado/$',consultarMaterialRecolectado),
-url(r'insertarMaterialesRecolectados/$',insertarMaterialesRecolectados),
-url(r'materialRecolectado/$',insertarMaterialesRecolectados),
 
+# --------------URLS material recolectado----------------------
+url(r'insertarMaterialRecolectado/$',insertarMaterialRecolectado),
+url(r'consultarMaterialRecolectado/$',consultarMaterialRecolectado),
+url(r'modificarMaterialRecolectado/$',modificarMaterialRecolectado),
+url(r'guardarMaterialRecolectado/$',guardarMaterialRecolectado),
+url(r'eliminarMaterialRecolectado/$',eliminarMaterialRecolectado),
 
-
+# --------------URLS camiones----------------------
+url(r'insertarCamiones/$',insertarCamion),
+url(r'consultarCamion/$',consultarCamion),
+url(r'modificarCamiones/$',modificarCamion),
+url(r'guardarCamion/$',guardarCamion),
+url(r'eliminarCamiones/$',eliminarCamion),
 
 
 
