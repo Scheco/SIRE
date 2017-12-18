@@ -19,7 +19,7 @@ def insertarCamion(request):
 # Metodo para consultar todos los datos de los camiones ya registrados
 def consultarCamion(request):
     camiones = Camiones.objects.all()
-    return render(request, 'BuscarCamiones.html', {'registroCamiones':camiones})
+    return render(request, 'consultarCamiones.html', {'registroCamiones':camiones})
 
 
 
