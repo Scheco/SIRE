@@ -3,6 +3,7 @@
 {% block  titulo%}
   Insertar Horario
 {% endblock %}
+
 {% block contenido %}
 <form class="contenedor" action="insertarHorario/" method="get" onload="validarHora()">
   {% csrf_token %}
@@ -21,7 +22,7 @@
 
   <div class="CajaLogin  ">
     <br>
-    Lunes:  <input type="checkbox" name="lunes" checked="True">
+    Lunes:  <input id="lunes" type="checkbox" name="lunes" checked="True">
   </div>
   <div class="CajaLogin">
   <input class="caja" style="display:none" type="TimeField" name="horaLunes" placeholder="HH:MM">
@@ -73,3 +74,5 @@
   {% endif %}
 </form>
 {% endblock %}
+{% load static from staticfiles %}
+<script type="text/javascript" src="{% static 'JS/horarios.js' %}"></script>
