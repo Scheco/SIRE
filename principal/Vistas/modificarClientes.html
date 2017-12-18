@@ -11,29 +11,29 @@ Modificar Clientes
 {% endif %}
 <form class="contenedor" action="/guardarCambiosClientes/" method="post">
     {% csrf_token %}
-    <div class="">
-      ID Cliente: <input type="text" name="idCliente" value="{{reg.idCliente}}" readonly>
-    </div>
-    <div class="">
-      ID Material: <input type="number" name="idMaterial" value="{{reg.idMaterial_id}}">
-    </div>
-    <div class="">
-      Nombre: <input type="text" name="nombre" value="{{reg.nombre}}">
+    {# <div class=""> #}
+  <p>  ID Cliente:</p>   <input type="text" class="caja"name="idCliente" value="{{reg.idCliente}}" readonly>
+    {# </div> #}
+    {# <div class=""> #}
+  <p> ID Material:</p>    <input type="number" class="caja" name="idMaterial" value="{{reg.idMaterial_id}}">
+    {# </div> #}
+    {# <div class=""> #}
+  <p>Nombre:</p>     <input type="text"  class="caja"name="nombre" value="{{reg.nombre}}">
 
-    </div>
-    <div class="">
-      Apellido Paterno: <input type="text" name="apellidoP" value="{{reg.apellidoP}}">
+    {# </div> #}
+    {# <div class=""> #}
+<p> Apellido Paterno:</p>   <input type="text" class="caja" name="apellidoP" value="{{reg.apellidoP}}">
 
-    </div>
-    <div class="">
-      Apellido Materno: <input type="text" name="apellidoM" value="{{reg.apellidoM}}">
-    </div>
-    <div class="">
-     Domicilio: <input type="text" name="domicilio" value="{{reg.domicilio}}">
-    </div>
-    <div class="">
-        Telefono: <input type="number" name="telefono" value="{{reg.telefono}}">
-    </div>
+    {# </div> #}
+    {# <div class=""> #}
+  <p>Apellido Materno:</p>     <input type="text" class="caja" name="apellidoM" value="{{reg.apellidoM}}">
+    {# </div> #}
+    {# <div class=""> #}
+  <p>Domicilio:</p>    <input type="text"  class="caja"name="domicilio" value="{{reg.domicilio}}">
+    {# </div> #}
+    {# <div class=""> #}
+    <p> Telefono:</p>    <input type="number" class="caja" name="telefono" value="{{reg.telefono}}">
+    {# </div> #}
     <button type="submit" class="boton-ok" >Guardar Cambios</button>
 </form>
 {% endblock  %}

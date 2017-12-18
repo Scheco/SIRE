@@ -8,27 +8,27 @@
 <form class="contenedor" action="/guardarClientes/" method="post">
   <p>REGISTRAR CLIENTES</ps>
      {% csrf_token %}
-    <div class="menus">
-      ID Cliente: <input type="number" name="idCliente">
-    </div>
-    <div class="menus">
-      ID Material <input type="number" name="idMaterial">
-    </div>
-    <div class="menus">
-      Nombre: <input type="text" name="nombre">
-    </div>
-    <div class="menus">
-      Apellido Paterno: <input type="text" name="apellidoP">
-    </div>
-    <div class="menus">
-      Apellido Materno: <input type="text" name="apellidoM">
-    </div>
-    <div class="menus">
-        Domicilio: <input type="text" name="domicilio">
-    </div>
-    <div class="menus">
-        Telefono: <input type="text" name="telefono">
-    </div>
+    {# <div class="menus"> #}
+    <p>ID Cliente:</p> <input type="number" name="idCliente"class="caja">
+    {# </div> #}
+    {# <div class="menus"> #}
+    <p>ID Material</p>   <input type="number" name="idMaterial" class="caja">
+    {# </div> #}
+    {# <div class="menus"> #}
+    <p> Nombre:</p>  <input type="text" name="nombre" class="caja">
+    {# </div> #}
+    {# <div class="menus"> #}
+    <p>Apellido Paterno:</p>   <input type="text" name="apellidoP"class="caja">
+    {# </div> #}
+    {# <div class="menus"> #}
+  <p>Apellido Materno:</p>     <input type="text" name="apellidoM" class="caja">
+    {# </div> #}
+    {# <div class="menus"> #}
+    <p> Domicilio:</p>    <input type="text" name="domicilio" class="caja">
+    {# </div> #}
+  {# <div class="menus"> #}
+        <p>Telefono:</p> <input type="text" name="telefono" class="caja">
+    {# </div> #}
 
     <button type="submit" class="boton" >Guardar</button>
 </form>
