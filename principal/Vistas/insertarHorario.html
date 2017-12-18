@@ -14,12 +14,18 @@
 
   <div class="CajaLogin">
     <br>
-    ID Horario: <input id="horarioid" type="text" name="idHorario" class="caja">
+    ID Horario: <input id="horarioid" type="number" name="idHorario" class="caja" value="1">
   </div>
 
   <div class="CajaLogin">
   <br>
-    Id Negocio: <input id="negocioid" type="text" name="idNegocio" class="caja">
+    Id Negocio:
+    <input id="negocioid" type="text" name="idNegocio" class="caja" value="1">
+    <select>
+      {% for reg in negocios %}
+      <option value={{reg.idNegocio}}>{{reg.idNegocio}}</option>"
+      {% endfor %}
+    </select>
   </div>
 
   <div class="CajaLogin  ">

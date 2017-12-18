@@ -5,32 +5,35 @@
 {% endblock  %}
 
 {% block contenido  %}
+{% load static from staticfiles %}
+<script type="text/javascript" src="{% static 'JS/clientes.js' %}"></script>
+
 <form class="contenedor" action="/guardarClientes/" method="post">
   <p>REGISTRAR CLIENTES</ps>
      {% csrf_token %}
     {# <div class="menus"> #}
-    <p>ID Cliente:</p> <input type="number" name="idCliente"class="caja">
+    <p>ID Cliente:</p> <input id="clienteid" type="number" name="idCliente"class="caja">
     {# </div> #}
     {# <div class="menus"> #}
-    <p>ID Material</p>   <input type="number" name="idMaterial" class="caja">
+    <p>ID Material</p>   <input id="materialid" type="number" name="idMaterial" class="caja">
     {# </div> #}
     {# <div class="menus"> #}
-    <p> Nombre:</p>  <input type="text" name="nombre" class="caja">
+    <p> Nombre:</p>  <input id="nombre" type="text" name="nombre" class="caja">
     {# </div> #}
     {# <div class="menus"> #}
-    <p>Apellido Paterno:</p>   <input type="text" name="apellidoP"class="caja">
+    <p>Apellido Paterno:</p>   <input id="apellido_P" type="text" name="apellidoP"class="caja">
     {# </div> #}
     {# <div class="menus"> #}
-  <p>Apellido Materno:</p>     <input type="text" name="apellidoM" class="caja">
+  <p>Apellido Materno:</p>     <input id="apellido_M" type="text" name="apellidoM" class="caja">
     {# </div> #}
     {# <div class="menus"> #}
-    <p> Domicilio:</p>    <input type="text" name="domicilio" class="caja">
+    <p> Domicilio:</p>    <input id="domicilio" type="text" name="domicilio" class="caja">
     {# </div> #}
   {# <div class="menus"> #}
-        <p>Telefono:</p> <input type="text" name="telefono" class="caja">
+        <p>Telefono:</p> <input id="telefono" type="text" name="telefono" class="caja">
     {# </div> #}
 
-    <button type="submit" class="boton" >Guardar</button>
+    <button type="submit" class="boton" onclick="validarCliente();">Guardar</button>
 </form>
 
 

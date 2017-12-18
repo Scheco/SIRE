@@ -6,6 +6,7 @@ from viewTrabajadores import *
 from viewsProveedores import *
 from viewsNegocios import *
 from viewsCamiones import *
+from viewsMaterialRecolectado import *
 
 urlpatterns = [
 # ----------------URLS proveedores------------------
@@ -14,10 +15,13 @@ url(r'proveedores/$',insertarProveedores),
 
 
 # --------------URLS camiones----------------------
+url(r'eliminarCamiones/$',feliminarCamion),
 url(r'eliminarCamiones/$',eliminarCamion),
 url(r'modificarCamiones/$',modificarCamion),
-url(r'consultarCamion/$',consultarCamion),
+url(r'consultarCamiones/$',guardarCamion),
+url(r'consultarCamiones/$',consultarCamion),
 url(r'InsertarCamiones/$',insertarCamion),
+url(r'camiones/$',insertarCamion),
 # url(r'guardarCamion/$',insertarCamion),
 
 
@@ -52,6 +56,13 @@ url(r'consultarNegocios/modificarNegocio/$',modificarNegocios),
 url(r'consultarNegocios/$',consultarNegocios),
 url(r'insertarNegocios/$',insertarNegocios),
 url(r'negocios/$',insertarNegocios),
+
+#----------------URLS---------------------------
+url(r'modificarMaterialRecolectado/$',consultarMaterialesRecolectados),
+url(r'consultarMaterialesRecolectados/$',consultarMaterialesRecolectados),
+url(r'insertarMaterialesRecolectados/$',insertarMaterialesRecolectados),
+url(r'materialRecolectado/$',insertarMaterialesRecolectados),
+
 
 
 
