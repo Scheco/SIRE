@@ -1,0 +1,39 @@
+{% extends "menu.html"%}
+
+{% block titulo %}
+Modificar Material Recolectado
+{% endblock %}
+
+{% block contenido %}
+{% if msg%}
+<br>
+
+<label class="texto-ok">{{msg}}</label>
+{% endif %}
+
+<form class="contenedor" action="/guardarCambiosMaterialRecolectado/" method="post">
+    {% csrf_token %}
+
+    {# <div class=""> #}
+    <p>  ID MaterialRecolectado:</p>   <input type="number" class="caja"name="idCliente" value="{{reg.idCliente}}" readonly>
+    {# </div> #}
+
+    {# <div class=""> #}
+    <p>Peso</p>  <input type="number" class="caja" name="idMaterial" value="{{reg.idMaterial_id}}">
+    {# </div> #}
+
+    {# <div class=""> #}
+    <p>ID Camion</p>     <input type="number"  class="caja"name="nombre" value="{{reg.nombre}}">
+    {# </div> #}
+
+    {# <div class=""> #}
+      <p>ID Material</p>     <input type="number"  class="caja"name="nombre" value="{{reg.nombre}}">
+      {# </div> #}
+
+      {# <div class=""> #}
+        <p>ID Negocio</p>     <input type="number"  class="caja"name="nombre" value="{{reg.nombre}}">
+        {# </div> #}
+  <button type="submit" class="boton-ok" >Guardar Cambios</button>
+</form>
+
+{% endblock  %}
