@@ -59,7 +59,7 @@ class Materiales(models.Model):
     descripcion = models.CharField(max_length=200)
 
 class MaterialRecolectado(models.Model):
-    idMaterialRecolectado = models.IntegerField(primary_key=True)
+    idMaterialRecolectado = models.AutoField(primary_key=True)
     idMaterial = models.ForeignKey(Materiales)
     idCamion = models.ForeignKey(Camiones)
     idNegocio = models.ForeignKey(Negocios)
