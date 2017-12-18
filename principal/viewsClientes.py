@@ -32,7 +32,7 @@ def modificarClientes(request):
 
 def guardarCambiosClientes(request):
     Cl = Clientes(idCliente = request.POST['idCliente'])
-    Cl.idMaterial=request.POST['idMaterial']
+    Cl.idMaterial_id=request.POST['idMaterial']
     Cl.nombre=request.POST['nombre']
     Cl.apellidoP=request.POST['apellidoP']
     Cl.apellidoM=request.POST['apellidoM']
@@ -41,3 +41,14 @@ def guardarCambiosClientes(request):
     Cl.save()
     registrosClientes = Clientes.objects.all()
     return render (request, 'consultarClientes.html',{'msg':'Se ha actualizado el registro correctamente','registrosClientes':registrosClientes})
+
+def eliminarCliente(request):
+    idCliente=request.GET['idCliente']
+    clientes=Clientes.objects.filter(idCliente=idCliente)
+    return render(request,'eliminarClientes.html',{'idCliente':idCliente,'clientes':clientes})
+
+def eliminarCli(request):
+    Cl = Clientes(idCliente = request.POST['idCliente'])
+    Cl.delete()
+    registrosClientes = Clientes.objects.all()
+    return render (request, 'consultarClientes.html',{'msg':'Se ha eliminado el registro','registrosClientes':registrosClientes})
