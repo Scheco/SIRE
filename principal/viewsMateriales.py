@@ -18,3 +18,29 @@ def insertarMateriales(request):
             return render(request, 'insertarMateriales.html', {'msg': 'Se registro correctamente el material', 'm':m})
     else:
         return render(request, 'insertarMateriales.html')
+
+def consultarMateriales(request):
+    registros = Materiales.objects.all()
+    return render (request,'consultarMateriales.html',{'registros':registros})
+
+def modificarMateriales(request):
+    m = Materiales(idMaterial=request.POST['id'])
+    m.tipo = request.POST['tipo']
+    m.descripcion = request.POST['descripcion']
+    m.save()
+    registros = Materiales.objects.all()
+    return render(request,'consultarMateriales.html',{'msg':'Se han guardado los cambios correctamente','registros':registros})
+
+def modificarM(request):
+    registro = Materiales.objects.get(idMaterial=request.POST['id'])
+    return render(request,'modificarMateriales.html',{'reg':registro})
+
+def eliminarM(request):
+    id = request.GET['id']
+    return render(request,'eliminarMateriales.html',{'id':id})
+
+def eliminarMateriales(request):
+    m = Materiales(idMaterial=request.POST['id'])
+    m.delete()
+    registros = Materiales.objects.all()
+    return render(request,'consultarMateriales.html',{'msg':'Se ha eliminado correctamente','registros':registros})

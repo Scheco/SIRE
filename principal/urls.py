@@ -15,6 +15,11 @@ url(r'insertarTrabajador/$',insertarTrabajador),
 url(r'guardarClientes/$',insertarClientes),
 url(r'insertarHorario/$',insertarHorario),
 url(r'insertarMateriales/$',insertarMateriales),
+url(r'consultarMateriales/$',consultarMateriales),
+url(r'modificarM/$',modificarM),
+url(r'modificarMateriales/$',modificarMateriales),
+url(r'eliminarM/$',eliminarM),
+url(r'eliminarMateriales/$',eliminarMateriales),
 url(r'^$',menu)
 
 ]
