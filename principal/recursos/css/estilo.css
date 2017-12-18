@@ -38,8 +38,6 @@
   background-color: #96dcff;
   border: 1px solid black;
   color: black;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
 }
 .boton,
@@ -70,28 +68,19 @@
 }
 .boton-ok:hover {
   background-color: #63db64;
-  -webkit-box-shadow: 0px 0px 8px #0c330c;
   box-shadow: 0px 0px 8px #0c330c;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
   color: #0c330c;
 }
 .boton-no:hover {
   background-color: #daacac;
-  -webkit-box-shadow: 0px 0px 8px #5e2929;
   box-shadow: 0px 0px 8px #5e2929;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
   color: #5e2929;
 }
 .boton:hover {
   background-color: #c3d3ee;
-  -webkit-box-shadow: 0px 0px 8px #284d8a;
   box-shadow: 0px 0px 8px #284d8a;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
   color: #284d8a;
 }
@@ -99,7 +88,6 @@
 .caja-error {
   border: 0.5px solid #4956fc;
   background-color: lightgreen;
-  -webkit-box-shadow: 0px 0px 18px #956677;
   box-shadow: 0px 0px 18px #956677;
   margin: 3px;
   padding: 5px;
@@ -108,12 +96,10 @@
 }
 .caja:focus {
   outline: none;
-  -webkit-box-shadow: 0px 0px 10px skyblue;
   box-shadow: 0px 0px 10px skyblue;
 }
 .caja-error {
   border: 0.5px solid #d44018;
-  -webkit-box-shadow: 0px 0px 10px #ee8264;
   box-shadow: 0px 0px 10px #ee8264;
 }
 html {
@@ -209,8 +195,6 @@ a:hover {
   background-color: #96dcff;
   border: 1px solid black;
   color: black;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
 }
 .boton-ok {
@@ -223,28 +207,19 @@ a:hover {
 }
 .boton-ok:hover {
   background-color: #63db64;
-  -webkit-box-shadow: 0px 0px 8px #0c330c;
   box-shadow: 0px 0px 8px #0c330c;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
   color: #0c330c;
 }
 .boton-no:hover {
   background-color: #daacac;
-  -webkit-box-shadow: 0px 0px 8px #5e2929;
   box-shadow: 0px 0px 8px #5e2929;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
   color: #5e2929;
 }
 .boton:hover {
   background-color: #c3d3ee;
-  -webkit-box-shadow: 0px 0px 8px #284d8a;
   box-shadow: 0px 0px 8px #284d8a;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
   color: #284d8a;
 }
