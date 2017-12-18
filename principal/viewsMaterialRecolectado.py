@@ -19,3 +19,7 @@ def insertarMaterialesRecolectados(request):
             return render(request,'insertarMaterialRecolectado.html')
     else:
         return render(request,'insertarMaterialRecolectado.html')
+
+def consultarRecolectado(request):
+    registrosMaterialRecolectado = MaterialRecolectado.objects.all()
+    return render (request, 'consultarMaterialRecolectado.html',{'registrosMaterialRecolectado':registrosMaterialRecolectado})
