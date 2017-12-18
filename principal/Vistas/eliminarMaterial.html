@@ -5,10 +5,10 @@
 
 {% block contenido %}
 <p>CONFIRMACION DE ELIMINAR MATERIAL</p>
-<form class="contenedor" action="/eliminarMaterial/" method="post">
+<form class="contenedor" action="/eliminarMateriales/" method="post">
   {% csrf_token %}
   <br>
-  ID: <input type="text" name="idMaterial" value="{{idMaterial}}" readonly>
+  ID: <input type="text" name="idMaterial" value="{{id}}" readonly>
   <button type="submit" class="boton-no">Confirmar eliminacion</button>
 
 </form>
